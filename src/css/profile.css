@@ -1,0 +1,283 @@
+.paside {
+    background-color: #BD5828;
+    min-height: 100vh;
+    position: relative;
+    position: fixed;
+    right: 0;
+}
+/* input[type="checkbox"]:checked + label::before{
+    content: " ";
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #BD5828;
+    position:absolute;
+    top: 3px;
+    left: 0;
+} */
+.frow {
+    margin-left: 0;
+    margin-right: 0;
+}
+.davatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px !important;
+    background-color: #ffffff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-transform: uppercase;
+}
+.chr {
+    background-color: #8D8D8D;
+}
+.cprofile .avatar img{
+    display: block;
+    width: auto;
+    height: 100%;
+}
+.cprofile .avatar {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    margin: auto;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+/* .cprofile .col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.cprofile .col-sm-9 {
+    flex: 0 0 80%;
+    max-width: 80%;
+} */
+.font-roboto {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.weight-600 {
+    font-weight: 600 !important;
+}
+.ch-image {
+    display: flex;
+    justify-content: center;
+}
+.btn-av {
+    background-color: #EAE1CB;
+  
+    border-radius: 40px;
+    color: #af4125;
+    font-size: 15px;
+    
+    padding: 8px 28px;
+}
+.hr-white {
+    background-color: #EAE1CB;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 2px;
+    margin: 0 auto;
+  }
+.text-14 {
+    font-size: 14px;
+}
+.ptabs {
+    padding-left: 40px;
+    margin-top: 40px;
+    padding: 12px;
+}
+.ptabs .nav-link {
+    font-size: 18px !important;
+}
+.ptabs .nav {
+    display: flex;
+    flex-direction: column;
+}
+.ptabs .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: transparent;
+}
+.ptabs .nav-item {
+    padding:5px 5px;
+}
+.clogo {
+    padding: 20px 20px 0px;
+}
+.clogo img {
+    width: 140px;
+}
+.lgout {
+    margin-left: 45px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+}
+.cprofile .tab-content {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.cprofile form .row {
+    margin-bottom: 7px !important;
+}
+.cbtn {
+    padding:7px  60px !important;
+}
+.ubtn {
+    padding:5px  20px !important;
+}
+.cprofile .form-control {
+    background-color: #dfd8cf00;
+    border: 1.5px solid #808080;
+    color: #878787 !important;
+}
+
+.cprofile label.form-label {
+    color: #606060;
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+h5.mt-3.mb-0 {
+    font-size: 18;
+    font-size: 18px;
+    color: #606060;
+}
+.cprofile ::placeholder {
+    color: #878787 !important;
+}
+.tab-pane {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.cprofile .form-control:focus {
+    color: #878787 !important;
+    border-color: black;
+    box-shadow: none;
+}
+.cprofile a.nav-link.active::before {
+    content: " ";
+    position: absolute;
+    border: 1px solid white;
+    width: 45px;
+    margin-left: -60px;
+    margin-top: 12px;
+}
+.cprofile span {
+    font-size: 14px;
+    color: #878787;
+}
+.my-btn.nav-link.active::before {
+    border: 0 !important;
+}
+.ctoggle i {
+    font-size: 28px;
+    color: #EAE1CB;
+    margin-top: 10px;
+}
+.ctoggle {
+    text-align: center;
+}
+.cprofile h3 {
+    color: #231f20 ;
+}
+.cprofile h3, .cprofile p, .cprofile span, .cprofile h5, .cprofile input, .cprofile .form-control, .cprofile a, .cprofile label, .cprofile button, .cprofile b, .cprofile option, .cmtitle, .cmodal h3{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.cmodal .modal-body {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+.default-av {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+@media only screen and (min-width:768px){
+    .ctoggle {
+        display: none;
+    }
+}
+/* Responsive css */
+@media only screen and (max-width:768px) {
+    .cprofile .tab-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media only screen and (max-width:600px) {
+    .ptabs {
+        margin-top: 40px;
+        display: none;
+    }
+    .ctoggle {
+        float: left;
+    }
+    .paside {
+        position: relative;
+        min-height: auto;
+        padding-bottom: 10px;
+    }
+    .lgout {
+        bottom: 5px;
+        right: 20px;
+        display: block;
+        text-align: center;
+        margin-left: 0;
+        float: right;
+        line-height: 45px;
+    }
+    .cprofile .tab-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+.portfolio-data {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #BD5828;
+    margin-bottom: 20px;
+    background-color: #EAE1CB;
+}
+.myportfolios img {
+    width: 80px;
+}
+.pimg {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.myportfolios .ptitle {
+    width: 100%;
+}
+.cmodal p {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+img {
+    cursor: pointer;
+}
+#pupload {
+    z-index: -1;
+}
+.upload-btn-wrapper ul {
+    padding-left: 0;
+}
