@@ -40,10 +40,10 @@ class Footer extends React.Component {
                                 </Nav>
                             </div>
                         </div>
-                    </div>
-                    <center><hr className="line" />
+                        <center><hr className="line" />
                             <h5>Breathing Crafts Private Limited © All rights reserved 2021</h5>
-                    </center>
+                        </center>
+                    </div>
                 </footer>
             </div>
         );

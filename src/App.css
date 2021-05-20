@@ -212,9 +212,9 @@ a {
 
 /* footer CSS */
 .footer {
-  background-color: #BE5927;
+  background-color: #af4125;
   padding-bottom: 20px;
-  padding-top: 50px;
+ 
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -524,13 +524,13 @@ hr.line {
 }
 footer hr.line {
   width: 100%;
-  color: red;
+  color: #af4125;
   height: 2px;
   opacity: unset;
   background-color: #eae1cb;
 }
 .footer .company-logo img{
-  width: 208px;
+  width: 140px;
   padding-bottom: 20px;
 }
 footer .nav-link {
@@ -977,7 +977,7 @@ background-color: transparent !important;
   margin-top: 68px;
   background-image: url(./images/portfolio.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 310px;
 
 }
@@ -1107,10 +1107,36 @@ select.font-arial.form-control {
   padding-bottom: 126px;
   padding-top: 25px;
 }
+
+.ecats .nav-link {
+  display: block;
+  padding: .5rem 20px!important;
+ 
+}
+.user-detail.mt-3.container-fluid {
+  margin-top: 87px!important;
+}
+.modal-footer {
+ 
+  place-content: center;
+}
 .lsection .container {
-  justify-content: center !important;
+  -webkit-justify-content: center!important;
+  justify-content: center!important;
   text-align: center;
 }
-.btn:hover {
-  border: none !important;
+
+.py-3 {
+  padding-top: 6rem!important;
+}
+
+.loader {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  background-color: #231f20;
 }
