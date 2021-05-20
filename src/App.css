@@ -972,7 +972,9 @@ background-color: transparent !important;
 }
 .pace .pace-progress:after {
   font-family: 'Athelas' !important;
+  color: #af4125!important;
 }
+
 
 .pbanner {
   margin-top: 55px;
@@ -1030,7 +1032,7 @@ div.ball{
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background-color: #231f20;
   z-index: 9999;
 }
 .preloader span span{
