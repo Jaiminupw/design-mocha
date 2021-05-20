@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Jumbotron, Container, Accordion, Card } from 'react-bootstrap'
+import { Accordion, Card } from 'react-bootstrap'
 import Footer from './Footer'
 import Header from './Header'
 import '../css/ework.css'
