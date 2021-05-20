@@ -161,9 +161,9 @@ p.font-arial.float-left.user {
     background: url(../../src/images//abanner.png);
     background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
   
-  margin-top: 68px;
+  
+  margin-top: 55px;
 }
 .faq .jumbotron {
     background-color: #dfd8cf !important;
