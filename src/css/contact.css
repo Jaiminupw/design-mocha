@@ -10,7 +10,7 @@
     background-image: url(../images/contact-us.png);
     margin-top: 68px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 310px;
 }
 .contact-page .form-control {
@@ -38,14 +38,7 @@
     box-shadow: none;
     border: 1px solid black
 }
-input[type="email"] 
-    {
-        height: calc(1.5em + .5rem + 2px) !important;
-        padding: .25rem .5rem !important;
-        font-size: .875rem !important;
-        line-height: 1.5 !important;
-        border-radius: .2rem !important;
-    }
+
 .cpadding2 {
     margin-top: 80px;
     margin-bottom: 130px;

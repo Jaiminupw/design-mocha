@@ -73,7 +73,7 @@ p.font-arial.float-left.user {
     align-items: center;
 }
 .portfolio-details .card {
-    background-color: rgba(211, 211, 211, 0.4);
+    background-color: #eae1cb;
 }
 .poptions p {
     font-size: 28px;
@@ -158,7 +158,8 @@ p.font-arial.float-left.user {
 .abanner {
     background: url(../../src/images//abanner.png);
     background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  height: auto;
   
   margin-top: 68px;
 }
@@ -193,4 +194,7 @@ p.font-arial.float-left.user {
 }
 .top-banner.abanner h3 {
     padding: 140px 0;
+}
+.user-detail {
+    margin-top: 80px !important;
 }

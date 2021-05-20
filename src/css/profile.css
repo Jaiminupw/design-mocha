@@ -91,7 +91,15 @@
     padding: 12px;
 }
 .ptabs .nav-link {
-    font-size: 18px !important;
+    font-size: 15px !important;
+}
+.ptabs .nav-link:hover {
+    font-size: 15px !important;
+    color: #231f20!important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #231f20!important;
+   
 }
 .ptabs .nav {
     display: flex;
