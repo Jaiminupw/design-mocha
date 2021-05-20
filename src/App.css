@@ -1107,3 +1107,7 @@ select.font-arial.form-control {
   padding-bottom: 126px;
   padding-top: 25px;
 }
+.lsection .container {
+  justify-content: center !important;
+  text-align: center;
+}
