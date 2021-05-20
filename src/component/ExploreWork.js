@@ -72,7 +72,7 @@ class ExploreWork extends PureComponent {
                         <div className="ecats">
                             <Nav defaultActiveKey="/home" as="ul">
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial active" href="/home">All</Nav.Link>
+                                    <Nav.Link className="font-arial active" href="/explore">All</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                     <Nav.Link className="font-arial" eventKey="link-1">Branding</Nav.Link>
@@ -81,10 +81,10 @@ class ExploreWork extends PureComponent {
                                     <Nav.Link className="font-arial" eventKey="link-2">Fashion Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-2">Artistic Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-3">Artistic Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-2">Digital Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-4">Digital Design</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </div>
@@ -109,9 +109,9 @@ class ExploreWork extends PureComponent {
                                                                 <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left user">Designmocha</p>
                                                             </div>
                                                             <div className="eoptions">
-                                                                <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">23</p>
-                                                                <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}12</p>
-                                                                <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}564</p>
+                                                                <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.inspiring_view}</p>
+                                                                <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}</p>
+                                                                <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}</p>
                                                                 <i className="fa fa-comment px-2 float-left pt-1"></i>
                                                             </div>
                                                         </div>

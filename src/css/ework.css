@@ -18,9 +18,9 @@
     justify-content: space-between;
 }
 .ecats .active {
-    background-color: #eae1cb;
+    
     border-radius: 3px;
-    color:#231f20;
+    color:#af4125 ;
     margin: 0px 11px 0px;
 }
 .emeta {
