@@ -128,26 +128,22 @@ class PortfolioDetail extends PureComponent {
                         <p className="font-arial float-right">Veiw more &gt;</p>
                     </div>
                     <div className="row ml-0">
-                        <div className="col-sm-3">
+                        <div className="col-sm-4">
                             <Card>
                                 <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
                             </Card>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-4">
                             <Card>
                                 <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
                             </Card>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-4">
                             <Card>
                                 <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
                             </Card>
                         </div>
-                        <div className="col-sm-3">
-                            <Card>
-                                <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
-                            </Card>
-                        </div>
+                        
                     </div>
                     <button className="cbtn btn my-btn mt-5 text-color font-arial">connect with me</button>
                 </div>
@@ -158,14 +154,14 @@ class PortfolioDetail extends PureComponent {
                     </div>
                     <div className="row ml-0">
                         {
-                            this.state.portfolios.slice(0, 4).map((portfolio) => {
+                            this.state.portfolios.slice(0, 3).map((portfolio) => {
                                 return (
-                                    <div className="col-sm-3">
+                                    <div className="col-sm-4">
                                         <a href={"/portfolio/" + portfolio.portfolio_id} >
                                         <Card>
                                             <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>
                                         </Card>
-                                        <Card.Footer className="px-0">
+                                        <Card.Footer className="px-0 pd-40">
                                             <div className="emeta">
                                                 <div className="euser">
                                                     <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left">Designmocha</p>
@@ -174,7 +170,7 @@ class PortfolioDetail extends PureComponent {
                                                     <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">0</p>
                                                     <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}</p>
                                                     <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}</p>
-                                                    <i className="fa fa-comment px-2 float-left pt-1"></i><p className="font-arial float-left">0</p>
+                                                    <i className="fa fa-comment px-2 float-left pt-1"></i>
                                                 </div>
                                             </div>
                                         </Card.Footer>

@@ -21,7 +21,7 @@
     
     border-radius: 3px;
     color:#af4125 ;
-    margin: 0px 11px 0px;
+    
 }
 .emeta {
     display: flex;
@@ -52,6 +52,7 @@ p.font-arial.float-left.user {
 }
 .blog-area .card {
     border-radius: 0.7rem !important;
+    max-width: 365px!important;
 }
 .blog-area img{
  min-height: 100%;
@@ -66,6 +67,7 @@ p.font-arial.float-left.user {
     {
         background: transparent;
         border: 0 !important;
+        max-width: 365px;
     }
 .user-flex {
     display: flex;

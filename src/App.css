@@ -287,7 +287,7 @@ footer p {
   float: left;
 }
 .site-logo img {
-  width: 140px;
+  width: 105px;
   margin-left: 40px;
 }
 .nav-toggle {
@@ -295,7 +295,7 @@ footer p {
   cursor: pointer;
 }
 .nav-toggle img {
-  width: 33px;
+  width: 20px;
   margin-right: 40px;
 }
 .SectionContainer .section {
@@ -876,8 +876,9 @@ footer .nav-link {
 
 #stickytop a {
   font-family: Arial, Helvetica, sans-serif;
-  color: #878787 !important;
+  color:  #606060!important;
   font-size: 14px !important;
+  font-weight: 600;
 }
 .App #stickytop {
   height: auto;
@@ -974,7 +975,7 @@ background-color: transparent !important;
 }
 
 .pbanner {
-  margin-top: 68px;
+  margin-top: 55px;
   background-image: url(./images/portfolio.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1015,7 +1016,7 @@ div.ball{
 #stickytop.fixed-top .slide-menu a:hover {
   font-size: 14px;
   margin-top: 0px;
-  color: #878787 !important;
+  color:  #606060!important;
 }
 .top-banner h3{
   font-weight: 700;
@@ -1055,7 +1056,7 @@ div.ball{
   font-size: 14px !important;
 }
 .eoptions {
-  color: #878787 !important;
+  color:  #606060!important;
   font-size: 14px;
 }
 
@@ -1138,4 +1139,8 @@ select.font-arial.form-control {
   z-index: 999;
   text-align: center;
   background-color: #231f20;
+}
+.card-footer.pd-40 {
+
+  margin-bottom: 46px;
 }
