@@ -76,7 +76,7 @@ class PortfolioDetail extends PureComponent {
         return (
             <div className="portfolio-details wrapper">
                 <Header />
-                <div className="user-detail mt-3 container-fluid">
+                <div className="user-detail mt-5 container-fluid">
                     <Card>
                         <Card.Body>
                             <div className="user-flex py-3">
