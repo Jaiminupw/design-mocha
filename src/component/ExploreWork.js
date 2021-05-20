@@ -109,9 +109,9 @@ class ExploreWork extends PureComponent {
                                                                 <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left user">Designmocha</p>
                                                             </div>
                                                             <div className="eoptions">
-                                                                <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">23</p>
-                                                                <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}12</p>
-                                                                <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}564</p>
+                                                                <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.inspiring_view}</p>
+                                                                <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}</p>
+                                                                <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}</p>
                                                                 <i className="fa fa-comment px-2 float-left pt-1"></i>
                                                             </div>
                                                         </div>

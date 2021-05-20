@@ -333,9 +333,13 @@ class CreateProfile extends React.Component {
         }
     }
     handleShow = () => {
+        console.log(this.state.show)
         this.setState({ fileName: "", fbtn: false })
-        if (this.state.basicInfo.first_name) {
+        if (Cookies.get("userProfile") === "true") {
             this.setState({ show: true })
+        }
+        else {
+            alert("submit basic information first")
         }
     }
     handleClose = () => {
