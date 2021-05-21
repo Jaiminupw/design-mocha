@@ -91,7 +91,7 @@ class Header extends React.Component {
                                             <Dropdown.Menu>
                                                 <Dropdown.Item href="/" className="font-arial">View Profile</Dropdown.Item>
                                                 <Dropdown.Item href="/create-profile" className="font-arial">Setting</Dropdown.Item>
-                                                <Dropdown.Item href="/" className="p-0">
+                                                <Dropdown.Item href="/" className="font-arial">
                                                     <Nav.Item>
                                                         <Nav.Link href="/" className="text-color px-3" onClick={this.LogoutMe}>{this.state.isAuth}</Nav.Link>
                                                     </Nav.Item>
