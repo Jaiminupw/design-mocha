@@ -13,7 +13,7 @@ class Contact extends React.Component {
     }
     render() {
         return (
-            <div className="contact-page">
+            <div className="contact-page wrapper mnhide">
                 <Header />
                 <div className="top-banner cbanner">
                     <div className="row">

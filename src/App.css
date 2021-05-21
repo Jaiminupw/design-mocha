@@ -1145,3 +1145,17 @@ select.font-arial.form-control {
 .card-footer.pd-40 {
   margin-bottom: 46px;
 }
+.App .slide-menu {
+  max-width: 0%;
+  opacity: 0;
+}
+@media only screen and (min-width: 800px) {
+  .mnhide .slide-menu {
+    max-width: 100% !important;
+    opacity: 100 !important;
+    right: 0 !important;
+  }
+  .mnhide .nav-toggle {
+    display: none !important;
+  }
+}
