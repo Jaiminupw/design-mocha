@@ -103,7 +103,7 @@ class ExploreWork extends PureComponent {
                                                     <Card>
                                                         <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>
                                                     </Card>
-                                                    <Card.Footer className="px-0">
+                                                    <Card.Footer className="px-0 pd-40">
                                                         <div className="emeta">
                                                             <div className="euser">
                                                                 <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left user">Designmocha</p>

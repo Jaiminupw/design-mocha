@@ -2,6 +2,9 @@ import React, { PureComponent } from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import auser from '../images/auser.png'
+import smita from '../images/smita.png'
+import puneet from '../images/puneet.png'
+import krishna from '../images/krishna.png'
 import { Card } from 'react-bootstrap'
 import '../css/ework.css'
 class AboutUs extends PureComponent {
@@ -31,7 +34,9 @@ class AboutUs extends PureComponent {
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
                                         <p className="font-arial font15">
-                                            <b className="font-arial font15">Gaurav Raheja</b> is the co-founder and the CEO of Designmocha.
+                                            <b className="font-arial font15">Gaurav Raheja</b> 
+                                            
+                                            is the co-founder and the CEO of Designmocha.
                                             A design activist with an experience of almost 2 decades. Has
                                             worked multiple fashion companies in the country and has
                                             been instrumental in launchmany celebrity and non-celebrity
@@ -39,13 +44,13 @@ class AboutUs extends PureComponent {
                                             the squash court. Inspite of being a fashion designer himself,
                                             he keeps his wardrobe pretty minimal. You can easily recognize
                                             him with his black t-shirt most of the times.
-                                        </p>
+                                                                                    </p>
                                     </Card.Body>
                                 </Card>
                             </div>
                             <div className="col-sm-4 px-4">
                                 <Card className="border-0">
-                                    <Card.Img src={auser} />
+                                    <Card.Img src={smita} />
                                     <Card.Body className="px-0">
                                         <p className="font-arial font15">
                                             <b className="font-arial font15">Smita Goel</b> is the co-founder and the CFO of Designmocha.
@@ -53,7 +58,8 @@ class AboutUs extends PureComponent {
                                             in corporate tax, international tax, M&A and transaction tax as
                                             well as in regulatory and policy matters. She has been advising
                                             major global and domestic companies on a range of tax and
-                                            regulatory issues for over a decade. Her appreciation for borderless cusines is undying. She loves travelling to find unique
+                                            regulatory issues for over a decade. Her appreciation for bor-
+                                            derless cusines is undying. She loves travelling to find unique
                                             experiences.
 
                                         </p>
@@ -80,7 +86,7 @@ class AboutUs extends PureComponent {
                         <div className="row mt-5 mb-5">
                             <div className="col-sm-4 px-4">
                                 <Card className="border-0">
-                                    <Card.Img src={auser} />
+                                    <Card.Img src={puneet} />
                                     <Card.Body className="px-0">
                                         <p className="font-arial font15">
                                             <b className="font-arial font15">Puneet Relan</b> is veteran in IT Services and Digital Business
@@ -98,7 +104,7 @@ class AboutUs extends PureComponent {
                             </div>
                             <div className="col-sm-4 px-4">
                                 <Card className="border-0">
-                                    <Card.Img src={auser} />
+                                    <Card.Img src={krishna} />
                                     <Card.Body className="px-0">
                                         <p className="font-arial font15">  
                                             <b className="font-arial font15">Krishna</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard

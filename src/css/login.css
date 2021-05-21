@@ -173,7 +173,7 @@ a:hover {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #231f20;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -235,7 +235,7 @@ span.flow {
     opacity: 0.3;
   }
   .logsection .form-control:focus {
-    color: #212529;
+    color: #231f20;
     
    
     border-color: #eae1cb;
@@ -288,7 +288,7 @@ i.cl:hover {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #231f20;
     border-top: none;
     border-left: none;
     border-right: none;

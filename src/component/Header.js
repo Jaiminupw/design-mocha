@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import siteLogo from '../images/logo-dark.png'
+import siteLogo from '../images/mochalogo.svg'
 import toggleMenu from '../images/menu.png'
 import { Nav, Navbar, Dropdown } from 'react-bootstrap'
 // import { LinkContainer } from 'react-router-bootstrap'
@@ -82,7 +82,7 @@ class Header extends React.Component {
                                     ((this.state.isAuth === "Login") || (this.state.isAuth === "")) ? (<Nav.Item>
                                         <Nav.Link href="/login" className="text-color px-3">Login</Nav.Link>
                                     </Nav.Item>) : (<>
-
+                                            
                                         <Dropdown>
                                             <Dropdown.Toggle className="nav-item font-arial nav-link" id="dropdown-basic">
                                                 {this.state.user.first_name ? (<span className="font-arial"><div className="header-av float-left mr-2"><img src={this.state.user.photo_url} alt="user"></img></div>{this.state.user.full_name}</span>) : "Designmocha"}
@@ -91,7 +91,7 @@ class Header extends React.Component {
                                             <Dropdown.Menu>
                                                 <Dropdown.Item href="/" className="font-arial">View Profile</Dropdown.Item>
                                                 <Dropdown.Item href="/create-profile" className="font-arial">Setting</Dropdown.Item>
-                                                <Dropdown.Item href="/" className="p-0">
+                                                <Dropdown.Item href="/" className="font-arial">
                                                     <Nav.Item>
                                                         <Nav.Link href="/" className="text-color px-3" onClick={this.LogoutMe}>{this.state.isAuth}</Nav.Link>
                                                     </Nav.Item>
