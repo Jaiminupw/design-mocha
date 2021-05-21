@@ -1152,9 +1152,13 @@ select.font-arial.form-control {
   background-color: #231f20;
 }
 .card-footer.pd-40 {
-  margin-bottom: 46px;
+  
   background: none;
   border-top: none;
+}
+.mheader {
+  padding-left: 17px;
+  padding-right: 17px;
 }
 .App .slide-menu {
   max-width: 0%;
