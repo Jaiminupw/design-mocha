@@ -1,15 +1,16 @@
 import React from 'react';
-import {  Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import siteLogo from '../images/logo-dark.png'
 import toggleMenu from '../images/menu.png'
-import { Nav, Navbar } from 'react-bootstrap'
+import { Nav, Navbar, Dropdown } from 'react-bootstrap'
 // import { LinkContainer } from 'react-router-bootstrap'
 import { getAuth } from '../services/getAuth';
 import { Logout } from '../services/Logout';
+import { getProfile } from '../services/getProfile';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { mdisplay: 0, mwidth: 0, isAuth: "" };
+        this.state = { mdisplay: 0, mwidth: 0, isAuth: "", user: {} };
     }
     menuToggle = () => {
         if (this.state.mdisplay === 0) {
@@ -20,6 +21,10 @@ class Header extends React.Component {
         }
     }
     async componentDidMount() {
+        getProfile().then(async (res) => {
+            await this.setState({ user: res.data })
+            console.log("user", this.state.user)
+        })
         var auth = getAuth()
         if (auth === true) {
             await this.setState({ isAuth: "Logout" })
@@ -73,16 +78,35 @@ class Header extends React.Component {
                                 <Nav.Item>
                                     <Nav.Link href="/contact-us" className="text-color px-3">Say Hello</Nav.Link>
                                 </Nav.Item>
-                                    {
-                                        ((this.state.isAuth==="Login") || (this.state.isAuth==="")) ? (<Nav.Item>
-                                            <Nav.Link href="/login" className="text-color px-3">Login</Nav.Link>
-                                        </Nav.Item>) : (<><Nav.Item to="/create-profile">
-                                        <Nav.Link href="/create-profile" className="text-color px-3" >My Profile</Nav.Link>
+                                {
+                                    ((this.state.isAuth === "Login") || (this.state.isAuth === "")) ? (<Nav.Item>
+                                        <Nav.Link href="/login" className="text-color px-3">Login</Nav.Link>
+                                    </Nav.Item>) : (<>
+
+                                        <Dropdown>
+                                            <Dropdown.Toggle className="nav-item font-arial nav-link" id="dropdown-basic">
+                                                {this.state.user.first_name ? (<span className="font-arial"><div className="header-av float-left mr-2"><img src={this.state.user.photo_url} alt="user"></img></div>{this.state.user.full_name}</span>) : "Designmocha"}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item href="/" className="font-arial">View Profile</Dropdown.Item>
+                                                <Dropdown.Item href="/create-profile" className="font-arial">Setting</Dropdown.Item>
+                                                <Dropdown.Item href="/" className="p-0">
+                                                    <Nav.Item>
+                                                        <Nav.Link href="/" className="text-color px-3" onClick={this.LogoutMe}>{this.state.isAuth}</Nav.Link>
+                                                    </Nav.Item>
+                                                </Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+
+                                        {/* <Nav.Item to="/create-profile">
+                                            <Nav.Link href="/create-profile" className="text-color px-3" >My Profile</Nav.Link>
+                                        </Nav.Item> */}
+                                    </>)
+                                }
+                                <Nav.Item>
+                                    <Nav.Link href="/" className="text-color px-3"><i className="fa fa-search"></i></Nav.Link>
                                 </Nav.Item>
-                                        <Nav.Item>
-                                        <Nav.Link href="/" className="text-color px-3" onClick={this.LogoutMe}>{this.state.isAuth}</Nav.Link>
-                                </Nav.Item></>)
-                                    }
                             </Nav>
                         </Navbar>
                     </div>
