@@ -1122,12 +1122,25 @@ input.font-arial.form-control {
 select.font-arial.form-control {
   font-size: 14px;
 }
-
+.mochabtn.bg:hover {
+  text-decoration: none;
+  color: #eae1cb;
+  background-color: #231f20;
+}
 .mochabtn.bg:active {
   text-decoration: none;
   color: #eae1cb!important;
   background-color: #af4125!important;
   border-color: #af4125!important;
+}
+.mochabtn:hover {
+  border: solid #af4125;
+  border-radius: 40px;
+  color: #eae1cb;
+  font-size: 15px;
+  background-color: #af4125;
+  padding: 10px 28px;
+  line-height: initial;
 }
 .mochabtn.bg:focus {
   color: #eae1cb;
