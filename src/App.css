@@ -747,6 +747,9 @@ footer .nav-link {
     color: #606060;
     font-size: 7px!important;
 }
+.user-detail {
+  margin-top: 73px !important;
+}
 .poptions p {
   font-size: 14px!important;
   font-weight: 600;

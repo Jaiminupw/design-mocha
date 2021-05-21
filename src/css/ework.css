@@ -77,6 +77,7 @@ p.font-arial.float-left.user {
 }
 .portfolio-details .card {
     background-color: #eae1cb;
+    margin-top: 56px;
 }
 .poptions p {
     font-size: 19px;
@@ -203,9 +204,7 @@ p.font-arial.float-left.user {
 .top-banner.abanner h3 {
     padding: 140px 0;
 }
-.user-detail {
-    margin-top: 57px !important;
-}
+
 .font15{
     font-size: 15px;
   
