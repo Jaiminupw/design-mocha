@@ -260,6 +260,14 @@ i.cl:hover {
     background-color: #231F20;
     font-size: 15px;
 }
+.rsection .btn.form.a:hover , .logsection .btn.form.a:hover {
+    color: #AF4125;
+    border-bottom: solid #AF4125;
+    
+    
+    font-size: 15px;
+}
+
 
 .btn-check:focus+.btn, .btn:focus {
     outline: none;
