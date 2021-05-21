@@ -79,21 +79,21 @@ class PortfolioDetail extends PureComponent {
                 <div className="user-detail mt-5 container-fluid">
                     <Card>
                         <Card.Body>
-                            <div className="user-flex py-3">
+                            <div className="user-flex ">
                                 <div className="user-av rounded-circle"><img alt="profile" src={this.state.user.photo_url} /></div>
-                                <div><h2 className="font-arial"><b className="font-arial">{this.state.user.profile_name}</b></h2></div>
-                                <p className="font-arial">Logo and Graphic Designers</p>
+                                <div><h2 className="mochah2 font-arial"><b className="font-arial">{this.state.user.profile_name}Designguru</b></h2></div>
+                                <p className="mochap font-arial">Logo and Graphic Designers</p>
                                 <div className="mt-4">
-                                    <h5 className="text-center"><b className="font-arial">Design for me is :</b></h5>
+                                    <h5 className="text-center"><b className="mochah5 font-arial">Design for me is :</b></h5>
                                     <p className="font-arial text-center">{this.state.user.design_journey}</p>
                                 </div>
                                 <div className="mt-4">
-                                    <h5 className="text-center"><b className="font-arial">Areas of Expertise :</b></h5>
+                                    <h5 className="text-center"><b className="mochah5 font-arial">Areas of Expertise :</b></h5>
                                     <p className="font-arial text-center expertise">{this.state.user.sub_category}</p>
                                 </div>
                                 <div className="poptions">
-                                    <i className="fa fa-lightbulb-o px-2 float-left pt-1 fa-2x"></i><p className="font-arial float-left pr-3">0</p>
-                                    <i className="fa fa-eye px-2 float-left pt-1 fa-2x"></i><p className="font-arial float-left pr-3">{this.state.portfolio.views}</p>
+                                    <i className="fa fa-lightbulb-o px-2 float-left pt-1 fa-2x"></i><p className="font-arial float-left pr-3">54</p>
+                                    <i className="fa fa-eye px-2 float-left pt-1 fa-2x"></i><p className="font-arial float-left pr-3">{this.state.portfolio.views}76</p>
                                     <i className="fa fa-heart px-2 float-left pt-1 fa-2x"></i><p className="font-arial float-left pr-3">{this.state.portfolio.likes}</p>
                                 </div>
                             </div>
@@ -124,8 +124,8 @@ class PortfolioDetail extends PureComponent {
                 </div>
                 <div className="container-fluid more-posts mborder mt-5 py-4">
                     <div className="mheader">
-                        <h3 className="font-arial mb-3 float-left">More from Designguru</h3>
-                        <p className="font-arial float-right">Veiw more &gt;</p>
+                        <h3 className="proth3 font-arial mb-3 float-left">More from Designguru</h3>
+                        <p className="mochaveiw font-arial float-right">Veiw more &gt;</p>
                     </div>
                     <div className="row ml-0">
                         <div className="col-sm-4">
@@ -145,12 +145,12 @@ class PortfolioDetail extends PureComponent {
                         </div>
                         
                     </div>
-                    <button className="cbtn btn my-btn mt-5 text-color font-arial">connect with me</button>
+                    <button className="mochabtn bg top font-arial "> CONNECT WITH ME</button>
                 </div>
                 <div className="container-fluid more-posts mtrans mt-5">
                     <div className="mheader">
-                        <h3 className="font-arial mb-3 float-left">You might also like</h3>
-                        <p className="font-arial float-right"><Link to="/explore">Veiw more &gt;</Link></p>
+                        <h3 className="proth3 font-arial mb-3 float-left">You might also like</h3>
+                        <p className="mochaveiw font-arial float-right"><Link to="/explore">Veiw more &gt;</Link></p>
                     </div>
                     <div className="row ml-0">
                         {
@@ -159,21 +159,21 @@ class PortfolioDetail extends PureComponent {
                                     <div className="col-sm-4">
                                         <a href={"/portfolio/" + portfolio.portfolio_id} >
                                         <Card>
-                                            <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>
-                                        </Card>
-                                        <Card.Footer className="px-0 pd-40">
-                                            <div className="emeta">
-                                                <div className="euser">
-                                                    <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left">Designmocha</p>
-                                                </div>
-                                                <div className="eoptions">
-                                                    <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">0</p>
-                                                    <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}</p>
-                                                    <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}</p>
-                                                    <i className="fa fa-comment px-2 float-left pt-1"></i>
-                                                </div>
-                                            </div>
-                                        </Card.Footer>
+                                                        <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>
+                                                    </Card>
+                                                    <Card.Footer className="px-0 pd-40">
+                                                        <div className="emeta">
+                                                            <div className="euser">
+                                                                <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left user">Designmocha</p>
+                                                            </div>
+                                                            <div className="eoptions">
+                                                                <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.inspiring_view}</p>
+                                                                <i className="fa fa-eye px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.views}</p>
+                                                                <i className="fa fa-heart px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.likes}</p>
+                                                                <i className="fa fa-comment px-2 float-left pt-1"></i>
+                                                            </div>
+                                                        </div>
+                                                    </Card.Footer>
                                         </a>
                                     </div>
                                 )

@@ -95,7 +95,7 @@ a {
 .section-four {
   padding-top: 50px;
   padding-bottom: 0px;
-  background-color: #DFD8CF;
+  background-color: #EAE1CB;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -287,7 +287,7 @@ footer p {
   float: left;
 }
 .site-logo img {
-  width: 105px;
+  
   margin-left: 40px;
 }
 .nav-toggle {
@@ -400,7 +400,7 @@ footer .pleft {
 .section-even{
   text-align: center;
   padding: 80px 220px;
-  background-color: #DFD8CF;
+  background-color: #EAE1CB;
 }
 .secondh3{
   padding-top: 18px;
@@ -442,7 +442,7 @@ footer .pleft {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #DFD8CF;
+  background-color: #EAE1CB;
 }
 
 .section .secondh3{
@@ -638,7 +638,7 @@ footer .nav-link {
   padding: 50px 0;
 }
   .site-logo img {
-    width: 140px;
+    
     margin-left: 20px;
   }
   .nav-toggle img {
@@ -751,10 +751,7 @@ footer .nav-link {
 .section-eleven {
   padding: 50px 0;
 }
-  .site-logo img {
-    width: 140px;
-    margin-left: 20px;
-  }
+  
   .nav-toggle img {
     width: 30px;
     margin-right: 20px;
@@ -893,7 +890,7 @@ footer .nav-link {
   height: auto;
 }
 .terms{
-  background-color: #DFD8CF;
+  background-color: #EAE1CB;
 }
 /* .fixed-top #site-header{
   background-color: white;
@@ -919,7 +916,7 @@ footer .nav-link {
 }
 .pdimg img{
   width: 100% !important;
-  height: 700px;
+  
   object-fit: cover; 
 }
 .App #site-header {
@@ -1156,6 +1153,8 @@ select.font-arial.form-control {
 }
 .card-footer.pd-40 {
   margin-bottom: 46px;
+  background: none;
+  border-top: none;
 }
 .App .slide-menu {
   max-width: 0%;
@@ -1199,4 +1198,33 @@ select.font-arial.form-control {
   min-width: 20px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.mochabtn.bg.top{
+  margin-top: 30px;
+}
+.proth3{
+  font-size: 18px;
+  font-weight: 600;
+  color: #231f20;
+
+}
+.mochah5{
+  font-size: 15px;
+  font-weight: 600;
+  color: #231f20;
+
+}
+.poptions {
+  margin-top: 29px;
+    color: #606060;
+    font-size: 10px;
+}
+.mochap{
+  font-size: 14px;
+  color: #231f20;
+}
+.mochah2{
+  color: #231f20;
+  margin-top: 14px;
 }

@@ -34,6 +34,7 @@
     font-size: 14px;
     margin-top: 0px;
     color: #231f20;
+    font-weight: bold;
 }
 p.font-arial.float-left.user {
     margin-left: 11px;
@@ -78,11 +79,12 @@ p.font-arial.float-left.user {
     background-color: #eae1cb;
 }
 .poptions p {
-    font-size: 28px;
+    font-size: 19px;
     font-weight: 600;
+    padding-right: 49px!important;
 }
 #sync1 .item {
-    background: #0c83e7;
+    background: #231f20;
     padding: 80px 0px;
     margin: 5px;
     color: #FFF;
@@ -102,7 +104,7 @@ p.font-arial.float-left.user {
       border-bottom: 3px solid gray;
   }
   .portfolio-details .owl-theme .owl-item {
-       height: 700px;
+       
        background-color: lightslategray;
    }
    .portfolio-details .owl-nav {
@@ -121,12 +123,13 @@ p.font-arial.float-left.user {
     background-color: transparent;
 }
 .portfolio-details .pdesc {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 30px;
+    color: #606060;
 }
 .portfolio-details .container-fluid{
     padding-left: 40px;
@@ -183,15 +186,16 @@ p.font-arial.float-left.user {
     width: 120px;
     height: 120px;
     overflow: hidden;
+    background: #2c2828;
 }
 .user-av img {
     width: 100% !important;
     height: 120px;
     object-fit: cover; 
+   
 }
 .about .card img {
-    height: 304px;
-    max-width: 300px;
+    
     object-fit: cover;
     align-self: center;
     border-radius: 14px;
@@ -200,9 +204,16 @@ p.font-arial.float-left.user {
     padding: 140px 0;
 }
 .user-detail {
-    margin-top: 80px !important;
+    margin-top: 57px !important;
 }
 .font15{
     font-size: 15px;
-    color:#231f20 ;
+  
+    color: #606060;
+}
+.mochaveiw, .mochaveiw a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #231f20;
+    font-family: Arial, Helvetica, sans-serif;
 }

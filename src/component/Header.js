@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import siteLogo from '../images/logo-dark.png'
+import siteLogo from '../images/mochalogo.svg'
 import toggleMenu from '../images/menu.png'
 import { Nav, Navbar, Dropdown } from 'react-bootstrap'
 // import { LinkContainer } from 'react-router-bootstrap'

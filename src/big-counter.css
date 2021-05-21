@@ -46,11 +46,16 @@
 }
 .pace .pace-progress-inner::after {
     display: block;
-    content: "Designmocha";
+    content: " ";
+	height: 60px;
+	background-image: url(./images/logo-dark.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
     font-weight: 100;
     font-size: 1.75rem;
     line-height: 1;
-    text-align: right;
+    text-align: center;
     color: white;
     position: absolute;
     bottom: 60px;
