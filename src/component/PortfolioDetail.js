@@ -128,22 +128,22 @@ class PortfolioDetail extends PureComponent {
                         <p className="mochaveiw font-arial float-right">Veiw more &gt;</p>
                     </div>
                     <div className="row ml-0">
-                        <div className="col-sm-4">
-                            <Card>
-                                <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
-                            </Card>
-                        </div>
-                        <div className="col-sm-4">
-                            <Card>
-                                <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
-                            </Card>
-                        </div>
-                        <div className="col-sm-4">
-                            <Card>
-                                <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src="" width="100%" /></Card.Body>
-                            </Card>
-                        </div>
-                        
+                        {
+                            this.state.portfolios.slice(0, 3).map((portfolio) => {
+                                return (
+                                    <div className="col-sm-4">
+                                        <a href={"/portfolio/" + portfolio.portfolio_id} >
+                                        <Card>
+                                                        <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>
+                                                    </Card>
+                                                    <Card.Footer className="px-0 pd-40">
+                                                        
+                                                    </Card.Footer>
+                                        </a>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                     <button className="mochabtn bg top font-arial "> CONNECT WITH ME</button>
                 </div>
