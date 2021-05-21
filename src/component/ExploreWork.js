@@ -72,7 +72,7 @@ class ExploreWork extends PureComponent {
                         <div className="ecats">
                             <Nav defaultActiveKey="/home" as="ul">
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial active" href="/home">All</Nav.Link>
+                                    <Nav.Link className="font-arial active" href="/explore">All</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
                                     <Nav.Link className="font-arial" eventKey="link-1">Branding</Nav.Link>
@@ -81,10 +81,10 @@ class ExploreWork extends PureComponent {
                                     <Nav.Link className="font-arial" eventKey="link-2">Fashion Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-2">Artistic Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-3">Artistic Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-2">Digital Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-4">Digital Design</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </div>

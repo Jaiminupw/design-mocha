@@ -30,8 +30,8 @@ class AboutUs extends PureComponent {
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
-                                        <p className="font-arial">
-                                            <b className="font-arial">Gaurav Raheja</b> is the co-founder and the CEO of Designmocha.
+                                        <p className="font-arial font15">
+                                            <b className="font-arial font15">Gaurav Raheja</b> is the co-founder and the CEO of Designmocha.
                                             A design activist with an experience of almost 2 decades. Has
                                             worked multiple fashion companies in the country and has
                                             been instrumental in launchmany celebrity and non-celebrity
@@ -47,8 +47,8 @@ class AboutUs extends PureComponent {
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
-                                        <p className="font-arial">
-                                            <b className="font-arial">Smita Goel</b> is the co-founder and the CFO of Designmocha.
+                                        <p className="font-arial font15">
+                                            <b className="font-arial font15">Smita Goel</b> is the co-founder and the CFO of Designmocha.
                                             With her deep knowledge and wide experience of over 15 years
                                             in corporate tax, international tax, M&A and transaction tax as
                                             well as in regulatory and policy matters. She has been advising
@@ -64,8 +64,8 @@ class AboutUs extends PureComponent {
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
-                                        <p className="font-arial">
-                                            <b className="font-arial">Sahil Mahajen</b> Lorem Ipsum is simply dummy text of the printing
+                                        <p className="font-arial font15">
+                                            <b className="font-arial font15">Sahil Mahajen</b> Lorem Ipsum is simply dummy text of the printing
                                             and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
                                             took a galley of type and scrambled it to make a type specimen
                                             book. It has survived not only five centuries, but also the leap into
@@ -82,8 +82,8 @@ class AboutUs extends PureComponent {
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
-                                        <p className="font-arial">
-                                            <b className="font-arial">Puneet Relan</b> is veteran in IT Services and Digital Business
+                                        <p className="font-arial font15">
+                                            <b className="font-arial font15">Puneet Relan</b> is veteran in IT Services and Digital Business
                                             Transformation space, with experience in managing global
                                             product and engineering teams, as part of multi-million-dollar
                                             programmes.His expertise in defining stratregy around product,
@@ -100,8 +100,8 @@ class AboutUs extends PureComponent {
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
-                                        <p className="font-arial">  
-                                            <b className="font-arial">Krishna</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                        <p className="font-arial font15">  
+                                            <b className="font-arial font15">Krishna</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
                                             dummy text ever since the 1500s, when an unknown printer took a
                                             galley of type and scrambled it to make a type specimen book. It
                                             has survived not only five centuries, but also the leap into electronic

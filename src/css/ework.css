@@ -18,10 +18,10 @@
     justify-content: space-between;
 }
 .ecats .active {
-    background-color: #eae1cb;
+    
     border-radius: 3px;
-    color:#231f20;
-    margin: 0px 11px 0px;
+    color:#af4125 ;
+    
 }
 .emeta {
     display: flex;
@@ -52,6 +52,7 @@ p.font-arial.float-left.user {
 }
 .blog-area .card {
     border-radius: 0.7rem !important;
+    max-width: 365px!important;
 }
 .blog-area img{
  min-height: 100%;
@@ -66,6 +67,7 @@ p.font-arial.float-left.user {
     {
         background: transparent;
         border: 0 !important;
+        max-width: 365px;
     }
 .user-flex {
     display: flex;
@@ -159,19 +161,20 @@ p.font-arial.float-left.user {
     background: url(../../src/images//abanner.png);
     background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
   
-  margin-top: 68px;
+  
+  margin-top: 55px;
 }
 .faq .jumbotron {
-    background-color: #dfd8cf !important;
+    background-color: #eae1cb !important;
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
 }
 .accordion .card-header {
-    background-color: #dfd8cf !important;
+    background-color: #eae1cb !important;
     font-size: 1.25rem !important;
     padding: 1rem 1.25rem !important;
+    color: #231f20;
 }
 .faq-info {
     margin-bottom: 80px;
@@ -187,14 +190,19 @@ p.font-arial.float-left.user {
     object-fit: cover; 
 }
 .about .card img {
-    height: 400px;
-    width: auto;
+    height: 304px;
+    max-width: 300px;
     object-fit: cover;
-    border-radius: 20px;
+    align-self: center;
+    border-radius: 14px;
 }
 .top-banner.abanner h3 {
     padding: 140px 0;
 }
 .user-detail {
     margin-top: 80px !important;
+}
+.font15{
+    font-size: 15px;
+    color:#231f20 ;
 }
