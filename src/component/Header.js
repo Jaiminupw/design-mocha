@@ -82,7 +82,7 @@ class Header extends React.Component {
                                     ((this.state.isAuth === "Login") || (this.state.isAuth === "")) ? (<Nav.Item>
                                         <Nav.Link href="/login" className="text-color px-3">Login</Nav.Link>
                                     </Nav.Item>) : (<>
-
+                                            
                                         <Dropdown>
                                             <Dropdown.Toggle className="nav-item font-arial nav-link" id="dropdown-basic">
                                                 {this.state.user.first_name ? (<span className="font-arial"><div className="header-av float-left mr-2"><img src={this.state.user.photo_url} alt="user"></img></div>{this.state.user.full_name}</span>) : "Designmocha"}
