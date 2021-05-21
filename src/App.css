@@ -372,6 +372,15 @@ footer .pleft {
   margin-bottom: -10px;
 }
 @media only screen and (max-width:768px) {
+  .slide-menu .dropdown {
+    padding: 5px 24px
+  }
+  .nav-toggle {
+    z-index: -1 !important;
+  }
+  .App #stickytop .slide-menu {
+    right: 0 !important;
+  }
      .pleft {
        padding: 20px !important;
      }
@@ -602,7 +611,7 @@ footer .nav-link {
     right: 0;
     background-color: #EAE1CB;
   }
-  .wrapper #stickytop #site-header a {
+  .wrapper #stickytop #site-header a, .wrapper #stickytop #site-header button {
     color: #BD5828 !important;
 }
   .navbar-expand .navbar-nav {
@@ -922,10 +931,10 @@ footer .nav-link {
 .App.wrapper .fixed-top #site-header {
   background-color: transparent !important;
 }
-.wrapper .fixed-top #site-header a{
+.wrapper .fixed-top #site-header a, .wrapper .fixed-top #site-header button{
   color: #BD5828 !important;
 }
-.App #site-header a{
+.App #site-header a, .App #site-header button{
   color: #EAE1CB !important;
   font-size: 14px;
 }
@@ -1010,7 +1019,7 @@ div.ball{
   margin-left: -2500px;
   margin-top: -2500px;
 }
-#stickytop .slide-menu a:hover {
+#stickytop .slide-menu a:hover, #stickytop .slide-menu button:hover {
     font-size: 14px;
     margin-top: 0px;
     color: #BD5828 !important;
@@ -1018,6 +1027,9 @@ div.ball{
 #stickytop.fixed-top .slide-menu a:hover {
   font-size: 14px;
   margin-top: 0px;
+  color:  #606060!important;
+}
+#stickytop .dropdown-menu a {
   color:  #606060!important;
 }
 .top-banner h3{
@@ -1143,6 +1155,48 @@ select.font-arial.form-control {
   background-color: #231f20;
 }
 .card-footer.pd-40 {
-
   margin-bottom: 46px;
+}
+.App .slide-menu {
+  max-width: 0%;
+  opacity: 0;
+  right: 40px !important;
+}
+@media only screen and (min-width: 800px) {
+  .mnhide .slide-menu {
+    max-width: 100% !important;
+    opacity: 100 !important;
+    right: 0 !important;
+  }
+  .mnhide .nav-toggle {
+    display: none !important;
+  }
+}
+.slide-menu {
+  overflow: visible;
+}
+.slide-menu .dropdown-toggle, .slide-menu .dropdown-toggle:active {
+  padding: 0 !important;
+  background-color: transparent !important;
+  border: 0 !important;
+}
+#dropdown-basic {
+  color: rgb(96, 96, 96) !important;
+  font-weight: 600;
+}
+.nav-toggle {
+  z-index: 9999;
+}
+.header-av {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.header-av img {
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  object-fit: cover;
+  border-radius: 50%;
 }

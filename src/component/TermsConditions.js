@@ -12,7 +12,7 @@ class TermsConditions extends PureComponent {
     }
     render() {
         return (
-            <div className="terms wrapper">
+            <div className="terms wrapper mnhide">
                 <Header />
                 <div className="container mb-5">
                     <h1 className="mb-3 mt-3 py-3">Terms and Conditions</h1>
