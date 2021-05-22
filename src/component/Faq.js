@@ -14,7 +14,7 @@ class Faq extends PureComponent {
 
     render() {
         return (
-            <div className="about wrapper">
+            <div className="about wrapper mnhide">
                 <Header />
                 
                 <div className="acontent">

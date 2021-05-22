@@ -1307,3 +1307,6 @@ background-color: aliceblue!important;
   width: 100%;
   transform: translate3d(0, 0, 0) !important;
 }
+.dropdown .nav-link {
+  padding: 0px 0px !important;
+}
