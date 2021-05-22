@@ -474,11 +474,20 @@ footer .pleft {
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateZ(-1px) scale(1.56);
+  transform: translateZ(-1px) scale(1.7);
   background-size: 100%;
   z-index: -1;
 }
-
+    .wrapper {
+      height: 100vh;
+      overflow-x: hidden;
+      perspective: 1.5px;
+    }
+@media screen and (min-height: 1024px) {
+  .wrapper {
+    perspective: 1.9px !important;
+  }
+}
 .psection { 
   position: relative;
   display: flex;
@@ -590,6 +599,9 @@ footer .nav-link {
   }
 }
 @media only screen and (max-width: 768px) {
+  .full-height {
+    min-height: 400px !important;
+  }
   #mwork button {
     width: 100% !important;
   }
@@ -826,11 +838,8 @@ footer .nav-link {
 .parallax::after {
   background-size: cover;
   background-repeat: no-repeat;
-  transform: translateZ(-0.2px) scale(1.5);
+  transform: translateZ(-0.3px) scale(1.5);
   margin-bottom: 10px;
-}
-.wrapper {
-  perspective: 1.5px;
 }
 .sectione2 p {
   max-width: 100%;
