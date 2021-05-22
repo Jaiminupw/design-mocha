@@ -30,31 +30,31 @@ class Faq extends PureComponent {
                             <div className="col-sm-10 mx-auto">
                                 <Accordion defaultActiveKey="0">
                                     <Card>
-                                        <Accordion.Toggle as={Card.Header} eventKey="0" className="font-arial">
+                                        <Accordion.Toggle as={Card.Header} eventKey="0" className="font-arial mochatram">
                                             Q: How does this work?
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="0">
-                                            <Card.Body className="font-arial">Hello! I'm the body</Card.Body>
+                                            <Card.Body className="font-arial mochatramp">Hello! I'm the body</Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                     <Card>
-                                        <Accordion.Toggle as={Card.Header} eventKey="1" className="font-arial">
+                                        <Accordion.Toggle as={Card.Header} eventKey="1" className="font-arial mochatram">
                                             Q: What is Bootstrap 4?
                                 </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="1">
-                                            <Card.Body className="font-arial">Hello! I'm another body</Card.Body>
+                                            <Card.Body className="font-arial mochatramp">Hello! I'm another body</Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                     <Card>
-                                        <Accordion.Toggle as={Card.Header} eventKey="2" className="font-arial">
+                                        <Accordion.Toggle as={Card.Header} eventKey="2" className="font-arial mochatram">
                                             Q. What is another question?
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="2" >
-                                            <Card.Body className="font-arial">Hello! I'm another body</Card.Body>
+                                            <Card.Body className="font-arial mochatramp">Hello! I'm another body</Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                     <Card>
-                                        <Accordion.Toggle as={Card.Header} eventKey="3" className="font-arial">
+                                        <Accordion.Toggle as={Card.Header} eventKey="3" className="font-arial mochatram">
                                             Q. What is another question?
                                         </Accordion.Toggle>
                                         <Accordion.Collapse eventKey="3" >

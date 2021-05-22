@@ -53,3 +53,17 @@ button.mochabtn.bg.left.font-arial.btn.btn-primary {
     overflow-x: hidden;
     perspective: 1.5px;
 }
+
+.mochatram{
+font-size: 20px;
+color: #231f20;
+font-weight: bold;
+}
+
+.mochatrampt{
+    margin-top: 34px;
+}
+.mochatramp {
+    color: #606060;
+    font-size: 15px;
+}

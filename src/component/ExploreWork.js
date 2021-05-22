@@ -98,7 +98,7 @@ class ExploreWork extends PureComponent {
                                 {
                                     this.state.portfolios.map((portfolio) => {
                                         return (
-                                            <div className="col-sm-4 mb-2">
+                                            <div className="col-sm-6 col-lg-4 mb-2">
                                                 <a href={"/portfolio/" + portfolio.portfolio_id} >
                                                     <Card>
                                                         <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>

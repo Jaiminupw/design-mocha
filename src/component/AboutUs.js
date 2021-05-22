@@ -29,7 +29,7 @@ class AboutUs extends PureComponent {
                     </div>
                     <div className="container">
                         <div className="row mt-5">
-                            <div className="col-sm-4 px-4">
+                            <div className="col-sm-6 col-lg-4 px-4">
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
@@ -48,7 +48,7 @@ class AboutUs extends PureComponent {
                                     </Card.Body>
                                 </Card>
                             </div>
-                            <div className="col-sm-4 px-4">
+                            <div className="col-sm-6 col-lg-4 px-4">
                                 <Card className="border-0">
                                     <Card.Img src={smita} />
                                     <Card.Body className="px-0">
@@ -66,7 +66,7 @@ class AboutUs extends PureComponent {
                                     </Card.Body>
                                 </Card>
                             </div>
-                            <div className="col-sm-4 px-4">
+                            <div className="col-sm-6 col-lg-4 px-4">
                                 <Card className="border-0">
                                     <Card.Img src={auser} />
                                     <Card.Body className="px-0">
@@ -82,9 +82,8 @@ class AboutUs extends PureComponent {
                                     </Card.Body>
                                 </Card>
                             </div>
-                        </div>
-                        <div className="row mt-5 mb-5">
-                            <div className="col-sm-4 px-4">
+                       
+                            <div className="col-sm-6 col-lg-4 px-4">
                                 <Card className="border-0">
                                     <Card.Img src={puneet} />
                                     <Card.Body className="px-0">
@@ -102,7 +101,7 @@ class AboutUs extends PureComponent {
                                     </Card.Body>
                                 </Card>
                             </div>
-                            <div className="col-sm-4 px-4">
+                            <div className="col-sm-6 col-lg-4 px-4">
                                 <Card className="border-0">
                                     <Card.Img src={krishna} />
                                     <Card.Body className="px-0">

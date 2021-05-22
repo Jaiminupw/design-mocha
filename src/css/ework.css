@@ -176,8 +176,9 @@ p.font-arial.float-left.user {
 }
 .accordion .card-header {
     background-color: #eae1cb !important;
-    font-size: 1.25rem !important;
+    font-size: 20px !important;
     padding: 1rem 1.25rem !important;
+    font-weight: bold;
     color: #231f20;
 }
 .faq-info {

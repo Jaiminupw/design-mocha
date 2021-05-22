@@ -550,6 +550,8 @@ footer .nav-link {
 }
 .col-sm-4.pleft h4 {
   padding-top: 32px;
+  font-size: 20px;
+    color: #231f20;
 }
 .slide-1 .container {
   min-height: 100vh;
