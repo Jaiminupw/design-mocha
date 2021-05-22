@@ -21,7 +21,18 @@ class PortfolioDetail extends PureComponent {
             portfolios: [],
             media: [],
             uid: '',
-            user: {}
+            user: {},
+            responsive: {
+                0: {
+                  items: 1
+                },
+                600: {
+                  items: 1
+                },
+                1000: {
+                  items: 1
+                }
+              }
         }
     }
     async componentDidMount() {
@@ -103,7 +114,7 @@ class PortfolioDetail extends PureComponent {
                 <div className="container-fluid portfolio-info mt-4">
                     <div className="row pflex row-eq-height">
                         <div className="col-sm-8 col">
-                            <OwlCarousel className='owl-theme' loop margin={0} items={1} nav autoplay>
+                            <OwlCarousel className='owl-theme' loop margin={0} responsive={this.state.responsive} nav autoplay>
                                 {
                                     this.state.media.map((img) => {
                                         return (
