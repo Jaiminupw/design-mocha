@@ -38,7 +38,7 @@ class Header extends React.Component {
         e.preventDefault()
         Logout()
             .then((res) => {
-                this.setState({ isAuth: "Login" })
+                this.setState({ isAuth: "Login",  scroll:"off"})
             })
             .catch((err) => {
                 this.setState({ isAuth: "Login" })
@@ -93,7 +93,7 @@ class Header extends React.Component {
                                                 <Dropdown.Item href="/create-profile" className="font-arial">Setting</Dropdown.Item>
                                                 <Dropdown.Item href="/" className="font-arial">
                                                     <Nav.Item>
-                                                        <Nav.Link href="/" className="text-color px-3" onClick={this.LogoutMe}>{this.state.isAuth}</Nav.Link>
+                                                        <Nav.Link href="/" className="text-color px-0" onClick={this.LogoutMe}>{this.state.isAuth}</Nav.Link>
                                                     </Nav.Item>
                                                 </Dropdown.Item>
                                             </Dropdown.Menu>

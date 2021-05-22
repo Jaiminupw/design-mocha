@@ -11,6 +11,7 @@ class ExploreWork extends PureComponent {
         super(props)
         this.state = {
             portfolios: [],
+            fportfolios: [],
             isAuthenticated: false
         }
     }
@@ -35,11 +36,23 @@ class ExploreWork extends PureComponent {
                     }
                     return true
                 })
-                this.setState({ portfolios: portfolios })
+                this.setState({ portfolios: portfolios, fportfolios: portfolios })
             }).catch((err) => {
                 this.setState({ error: "something went wrong" })
                 this.setState({ isAuthenticated: "false" })
             })
+    }
+    applyFilter = (e) => {
+        var cat = e.target.getAttribute("data-filter");
+        console.log(cat)
+        var portfolios = [];
+        this.state.fportfolios.map((pr) => {
+            if(pr.category === cat) {
+                portfolios.push(pr);
+            }
+            return pr
+        })
+        this.setState({portfolios: portfolios})
     }
     render() {
         if (this.state.isAuthenticated === "false") {
@@ -54,7 +67,7 @@ class ExploreWork extends PureComponent {
             <div className="ework wrapper mnhide">
                 <Header />
                 <div className="top-banner pbanner">
-                    <div className="row">
+                    <div className="row ml-0">
                         <div className="col-sm-12">
                             <div className="container-fluid"><h3>Discover India's best<br></br> design &amp; creative talent</h3></div>
                         </div>
@@ -72,19 +85,19 @@ class ExploreWork extends PureComponent {
                         <div className="ecats">
                             <Nav defaultActiveKey="/home" as="ul">
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial active" href="/explore">All</Nav.Link>
+                                    <Nav.Link className="font-arial active" href="/explore" data-filter="All">All</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-1">Branding</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-1" data-fiter="BRANDING">Branding</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-2">Fashion Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-2" data-filter="FASHION DESIGN">Fashion Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-3">Artistic Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-3" data-filter="ARTISTIC DESIGN">Artistic Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-4">Digital Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-4" data-filter="Others" onClick={this.applyFilter}>Digital Design</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </div>
@@ -98,15 +111,15 @@ class ExploreWork extends PureComponent {
                                 {
                                     this.state.portfolios.map((portfolio) => {
                                         return (
-                                            <div className="col-sm-6 col-lg-4 mb-2">
-                                                <a href={"/portfolio/" + portfolio.portfolio_id} >
+                                            <div className="col-sm-4 mb-2">
+                                                <a href={"/portfolio/" + portfolio.portfolio_id}>
                                                     <Card>
                                                         <Card.Body className="p-0 rounded"><img className="rounded" alt="portfolio img" src={portfolio.media_urls[0]} width="100%" /></Card.Body>
                                                     </Card>
                                                     <Card.Footer className="px-0 pd-40">
                                                         <div className="emeta">
                                                             <div className="euser">
-                                                                <i className="fa fa-user px-2 float-left pt-1"></i><p className="font-arial float-left user">Designmocha</p>
+                                                                <div className="float-left eav"><img src={portfolio.photo_url} alt="pimg"/></div><p className="font-arial float-left user">{portfolio.username}</p>
                                                             </div>
                                                             <div className="eoptions">
                                                                 <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.inspiring_view}</p>
