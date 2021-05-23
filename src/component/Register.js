@@ -140,7 +140,7 @@ class Register extends React.Component {
                                             required
                                             onClick={this.handleShow}
                                         />
-                                        <button type="submit" className="mochabtn" disabled={this.state.isloading}>SIGN ME UP</button>
+                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>SIGN ME UP</button>
                                         <Link to="/login" className="btn form a">I Am Already A Member</Link>
                                     </Form>
                                     {/* <span className="flow"> or connect with -

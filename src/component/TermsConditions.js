@@ -13,7 +13,7 @@ class TermsConditions extends PureComponent {
     render() {
         return (
             <div className="terms wrapper mnhide">
-                <Header />
+                <Header active="tnc"/>
                 <div className="abanner top-banner">
                         <div className="row">
                             <div className="col-sm-12">

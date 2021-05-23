@@ -287,7 +287,6 @@ footer p {
   float: left;
 }
 .site-logo img {
-  
   margin-left: 40px;
 }
 .nav-toggle {
@@ -793,12 +792,6 @@ footer .nav-link {
     width: 30px;
     margin-right: 20px;
 }
-  #site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
 .sabsolute {
   height: 100%;
 }
@@ -926,9 +919,6 @@ footer .nav-link {
 .terms{
   background-color: #EAE1CB;
 }
-/* .fixed-top #site-header{
-  background-color: white;
-} */
 .abanner {
   padding-left: 40px;
   padding-right: 40px;
@@ -939,9 +929,7 @@ footer .nav-link {
     max-width: 1320px !important;
 }
 }
-#site-header {
-  background-color: white;
-}
+
 .accordion .card {
   border-color: #fff !important;
 }
@@ -1023,7 +1011,6 @@ background-color: transparent !important;
   background-repeat: no-repeat;
   background-size: cover;
   height: 310px;
-
 }
 .pbanner .col-sm-6 {
   padding-left: 40px;
@@ -1133,11 +1120,6 @@ input.font-arial.form-control {
 select.font-arial.form-control {
   font-size: 14px;
 }
-.mochabtn.bg:hover {
-  text-decoration: none;
-  color: #eae1cb;
-  background-color: #231f20;
-}
 .mochabtn.bg:active {
   text-decoration: none;
   color: #eae1cb!important;
@@ -1159,7 +1141,7 @@ select.font-arial.form-control {
   border-color: #af4125;
   box-shadow: none;
 }
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+.btn:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
   box-shadow: none;
 }
 .accordion {
@@ -1320,4 +1302,7 @@ background-color: aliceblue!important;
 }
 .dropdown .nav-link {
   padding: 0px 0px !important;
+}
+.wrapper #site-header a.active {
+  color: #af4125 !important;
 }

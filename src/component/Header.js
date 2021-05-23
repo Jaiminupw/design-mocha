@@ -64,19 +64,19 @@ class Header extends React.Component {
                             <Nav className="mr-auto">
                                 <div className="nav-close" onClick={this.menuToggle}><i className="fa fa-close fa-2x float-right"></i></div>
                                 <Nav.Item>
-                                    <Nav.Link href="/" className="text-color px-3">Home</Nav.Link>
+                                    <Nav.Link href="/" className={`px-3 ${(this.props.active==="home") ? "active" : ""}`}>Home</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link href="/explore" className="text-color px-3">Explore Work</Nav.Link>
+                                    <Nav.Link href="/explore" className={`px-3 ${(this.props.active==="explore") ? "active" : ""}`}>Explore Work</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link href="/" className="text-color px-3">DM Cafe</Nav.Link>
+                                    <Nav.Link href="/" className={`px-3 ${(this.props.active==="hom") ? "active" : ""}`}>DM Cafe</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link href="/about-us" className="text-color px-3">About Us</Nav.Link>
+                                    <Nav.Link href="/about-us" className={`px-3 ${(this.props.active==="about") ? "active" : ""}`}>About Us</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link href="/contact-us" className="text-color px-3">Say Hello</Nav.Link>
+                                    <Nav.Link href="/contact-us" className={`px-3 ${(this.props.active==="contact") ? "active" : ""}`}>Say Hello</Nav.Link>
                                 </Nav.Item>
                                 {
                                     ((this.state.isAuth === "Login") || (this.state.isAuth === "")) ? (<Nav.Item>

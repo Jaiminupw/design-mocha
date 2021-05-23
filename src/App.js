@@ -10,13 +10,10 @@ class App extends PureComponent {
       scroll: false
     }
   }
-  pageScroll = () => {
-    this.setState({scroll: true})
-  }
   render() {
     return (
-      <div className="App wrapper" onScroll={this.pageScroll}>
-        <Header scroll={this.state.scroll}/>
+      <div className="App wrapper">
+        <Header active="home"/>
         <HomePage />
         <Footer />
       </div>

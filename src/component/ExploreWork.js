@@ -65,7 +65,7 @@ class ExploreWork extends PureComponent {
         }
         return (
             <div className="ework wrapper mnhide">
-                <Header />
+                <Header active="explore"/>
                 <div className="top-banner pbanner">
                     <div className="row ml-0">
                         <div className="col-sm-12">

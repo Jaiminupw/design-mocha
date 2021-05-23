@@ -71,7 +71,7 @@ class ForgotPass extends React.Component {
                                             <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                         </Form.Group>
                                        <br></br>
-                                        <button type="submit" class="mochabtn" disabled={this.state.isloading}>FORGOT PASSWORD</button>
+                                        <button type="submit" class="mochabtn bg text-color" disabled={this.state.isloading}>FORGOT PASSWORD</button>
                                         <Link to="/login" class="btn form a">LOGIN</Link>
                                     </Form>
                                     {/* <span class="flow"> or connect with -

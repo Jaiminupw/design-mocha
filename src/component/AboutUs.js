@@ -18,7 +18,7 @@ class AboutUs extends PureComponent {
     render() {
         return (
             <div className="about wrapper mnhide">
-                <Header />
+                <Header active="about"/>
                 <div className="acontent">
                     <div className="abanner top-banner">
                         <div className="row">

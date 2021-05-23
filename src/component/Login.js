@@ -110,7 +110,7 @@ class Login extends React.Component {
                                             <input type="password" autoComplete="new password" name='password' className="form-control mochainput" id="exampleInputPassword1"  onChange={this.handleChange} required />
                                             <Form.Control.Feedback type="invalid">please enter password</Form.Control.Feedback>
                                         </Form.Group><br />
-                                        <button type="submit" className="mochabtn" disabled={this.state.isloading}>LOGIN</button>
+                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>LOGIN</button>
                                         <Link to="/register" className="btn form a">If you haven't member </Link>
                                         <Link to='reset-password' className='btn form a forget'>FORGOT PASSWORD?</Link>
                                     </Form>

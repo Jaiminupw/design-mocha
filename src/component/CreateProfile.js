@@ -442,8 +442,8 @@ class CreateProfile extends React.Component {
         if (this.props.location.state) {
             username = this.props.location.state.username;
         }
-        if (this.state.basicInfo.profile_name) {
-            username = this.state.basicInfo.profile_name;
+        if (this.state.basicInfo.firstname_name) {
+            username = this.state.basicInfo.first_name + " " + this.state.basicInfo.last_name;
         }
         if (Cookies.get("username")) {
             username = Cookies.get("username");

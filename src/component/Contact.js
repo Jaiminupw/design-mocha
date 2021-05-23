@@ -14,7 +14,7 @@ class Contact extends React.Component {
     render() {
         return (
             <div className="contact-page wrapper mnhide">
-                <Header />
+                <Header active="contact"/>
                 <div className="top-banner cbanner">
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-sm-4">
