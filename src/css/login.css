@@ -111,30 +111,13 @@ hr.line {
 .col-sm-6.center {
     background-image: url(../images/rback.png);
     text-align: center;
-    min-height: 80vh;
     background-size: cover;
     color: #eae1cb;
 }
-.rsection .col-sm-6.form {
-    align-self: center;
-    background-color: #231F20;
-    position: relative;
-    min-height: 570px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.rsection form {
-    padding: 0px 76px;
-}
-
-
 
 .col-sm-4.pleft {
     padding-left: 10rem;
 }
-
-
 
 i.fa {
     padding-right: 10px;
@@ -153,16 +136,18 @@ a:hover {
     flex-direction: column;
 }
 
-.logsection .col-sm-6.form{
-    
-    align-self: center;
-    
+.logsection .col-sm-6, .rsection .col-sm-6{
+    display: flex;
+    min-height: 85vh;
+    flex-direction: column;
+    justify-content: center;
     background-color: #231F20;
 }
-
-.logsection form {
-    padding: 0px 76px;
-    
+.col-sm-6.form {
+    padding: 40px 91px;
+}
+.rsection .col-sm-6.form {
+    padding-bottom: 80px;
 }
 .logsection .form-control {
     display: block;
@@ -277,16 +262,9 @@ i.cl:hover {
 }
 .sectionwel {
     font-size: 60px;
-    padding-top: 168px;
     font-weight: 600;
-    padding-bottom: 26px;
 }
-.lflex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 400px;
-}
+
 .rsection .form-control {
     display: block;
     width: 100%;
@@ -312,9 +290,22 @@ i.cl:hover {
 .lflex p {
     padding: 4px 0px;
     padding-bottom: 15px !important;
-    color: red !important;
+    color: red;
     margin-bottom: 0;
     border-radius: 3px;
+}
+.btohome {
+    padding: 0 96px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}
+.btohome i {
+    line-height:22px !important;
+    font-size: 14px;
+}
+.btohome p {
+    font-size: 14px;
 }
 /* Responsive CSS */
 @media only screen and (max-width:768px) {
@@ -328,6 +319,7 @@ i.cl:hover {
         min-height: 300px;}
     .sectionwel {
         font-size: 40px;
+
     }
    .logsection form {
         padding: 30px 20px;

@@ -7,13 +7,8 @@ body {
   margin: 0;
   font-family: 'Athelas' !important;
   overflow-x: hidden;
+  background-color: #EAE1CB;
 }
-body {
-    background-color: #ffffff !important;
-}
-/* .App {
-  margin-top: -127px;
-} */
 a {
   color: inherit;
   text-decoration: none;
@@ -21,6 +16,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.primary-color {
+  color: #af4125 !important;
 }
 /* Homepage CSS */
 .section-one {
@@ -79,6 +77,10 @@ a {
   position: relative;
   overflow: hidden;
   margin-left: -5px;
+  padding: 11rem 0;
+}
+.section-three2 {
+  padding: 13rem 0;
 }
 .section-backgroundthree h1 {
   position: absolute;
@@ -140,6 +142,7 @@ a {
   justify-content: center;
   position: relative;
   margin-left: -5px;
+  padding: 16rem 0;
 }
 .lsection {
   overflow: hidden;
@@ -157,7 +160,7 @@ a {
   position: relative;
 }
 .section-twelve {
-  background-image: url('./images/bg-last.png');
+  background:linear-gradient(#231f207a, #231f207a) ,url('./images/bg-last.png');
   background-color: #040707;
   padding-bottom: 80px;
   padding-top: 80px;
@@ -249,12 +252,6 @@ footer p {
 }
 .sabsolute .container {
   align-items: center;
-}
-.full-height {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .full-height h3{
   font-size: 70px !important;
@@ -371,6 +368,9 @@ footer .pleft {
   margin-bottom: -10px;
 }
 @media only screen and (max-width:768px) {
+  .full-height h3 {
+    font-size: 32px !important;
+  }
   .slide-menu .dropdown {
     padding: 5px 24px
   }
@@ -473,14 +473,14 @@ footer .pleft {
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateZ(-1px) scale(1.7);
+  transform: translateZ(-1.6px) scale(1.7);
   background-size: 100%;
   z-index: -1;
 }
     .wrapper {
       height: 100vh;
       overflow-x: hidden;
-      perspective: 1.5px;
+      perspective: 2.4px;
     }
 @media screen and (min-height: 1024px) {
   .wrapper {
@@ -499,7 +499,7 @@ footer .pleft {
   background: red;
 }
 .section-three::after {
-  background-image: url('./images/bg-2.png');
+  background:linear-gradient(#231f2054, #231f2054), url('./images/bg-2.png');
   background-position: bottom !important;
   background-repeat: no-repeat;
   background-size: cover;
@@ -583,28 +583,19 @@ footer .nav-link {
 }
 /* Responsive CSS */
 @media only screen and (max-width: 1920px) {
-  .full-height {
-    min-height: 700px !important;
-  }
   .parallax::after {
-    transform: translateZ(-0.6px) scale(1.6);
+    transform: translateZ(-1.2px) scale(1.8);
   }
 }
 @media only screen and (max-width: 1024px) {
-  .sabsolute h3 {
+  .sabsolute h1 {
     font-size: 62px !important;
-  }
-  .full-height {
-    min-height: 600px !important;
   }
   .parallax::after {
     transform: translateZ(-0.6px) scale(1.6);
   }
 }
 @media only screen and (max-width: 768px) {
-  .full-height {
-    min-height: 400px !important;
-  }
   #mwork button {
     width: 100% !important;
   }
@@ -635,11 +626,6 @@ footer .nav-link {
     flex-direction: column;
     width: 100%;
 }
-
-  .section-three, .section-three2, .section-five {
-    padding-top: 170px;
-    padding-bottom: 170px;
-  }
   .section-three2 h3 {
     padding:0;
   }
@@ -674,10 +660,7 @@ footer .nav-link {
 .slide-1 {
   position: relative;
 }
-.full-height h3 {
-  font-size: 32px !important;
-}
-.sabsolute h3 {
+.sabsolute h1 {
   font-size: 41px !important;
   margin-top: 10px;
 }
@@ -700,11 +683,6 @@ footer .nav-link {
 
 .sectione1 .heading-1 {
   max-width: 100%;
-}
-.full-height {
-  min-height: auto;
-  padding-top: 150px;
-  padding-bottom: 150px;
 }
 .parallax::after {
   background-size: cover;
@@ -750,10 +728,6 @@ footer .nav-link {
 }
 }
 @media only screen and (max-width: 600px) {
-  .section-five, .section-three2 {
-    padding-top: 65px !important;
-    padding-bottom: 65px !important;
-  }
   .section-three2 h3 {
     padding:0;
   }
@@ -768,7 +742,6 @@ footer .nav-link {
 .poptions p {
   font-size: 14px!important;
   font-weight: 600;
-  
   margin: 0px;
 }
   .section-even {
@@ -800,10 +773,7 @@ footer .nav-link {
 .slide-1 {
   position: relative;
 }
-.full-height h3 {
-  font-size: 32px !important;
-}
-.sabsolute h3 {
+.sabsolute h1 {
   font-size: 24px !important;
   margin-top: 10px;
 }
@@ -826,11 +796,6 @@ footer .nav-link {
 
 .sectione1 .heading-1 {
   max-width: 100%;
-}
-.full-height {
-  min-height: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 .parallax::after {
   background-size: cover;
@@ -1075,11 +1040,12 @@ div.ball{
   border-color: inherit !important;
   background-image: none !important;
 }
-.form-control.is-valid:focus, .was-validated .form-control:valid:focus {
+.form-control.is-valid:focus, .was-validated .form-control:valid:focus, .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
   box-shadow: none !important;
 }
-.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
-  box-shadow: none !important;
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  background-image: none !important;
+  padding-right: 0 !important;
 }
 .cprofile form .form-group, .form-group {
   margin-bottom: 12px !important;
@@ -1317,4 +1283,7 @@ background-color: aliceblue!important;
 .footer .copyright {
   font-size: 14px !important;
   color: #EAE1CB;
+}
+.top-banner {
+  margin-top: 70px !important;
 }

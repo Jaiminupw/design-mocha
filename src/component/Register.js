@@ -102,7 +102,6 @@ class Register extends React.Component {
                                 <div className="welcome">
                                     <h4 className="sectionwel">WELCOME TO <br />DESIGNMOCHA.</h4>
                                 </div>
-                                <a href="/" className="mochabtn bg">BACK TO HOME </a>
                             </div>
                             <div className="col-sm-6 form">
                                 <div className="rflex">
@@ -110,22 +109,22 @@ class Register extends React.Component {
                                         {!this.state.successMessage ? '' : (<p className="text-color">{this.state.successMessage}</p>)}
                                         {!this.state.isloading ? '' : (<p className="text-color">Loading please wait..</p>)}
                                         <Form.Group controlId="validationCustom01">
-                                            <label for="exampleInputEmail1" className="mochalabel">USERNAME</label>
+                                            <label for="exampleInputEmail1" className="mochalabel">Username</label>
                                             <input type="text" name="username" className="form-control mochainput " id="exampleInputEmail1" aria-describedby="FullName"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">username is required</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom02">
-                                            <label for="exampleInputEmail1" className="mochalabel"> EMAIL ADDRESS</label>
+                                            <label for="exampleInputEmail1" className="mochalabel"> Email Address</label>
                                             <input type="email" name="email" className="form-control mochainput " id="exampleInputEmail1" aria-describedby="Email"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom03">
-                                            <label for="exampleInputPassword1" className="mochalabel">PASSWORD</label>
+                                            <label for="exampleInputPassword1" className="mochalabel">Password</label>
                                             <input type="password" name="password" className="form-control mochainput " id="exampleInputPassword1"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">Password is required</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom04">
-                                            <label for="exampleInputPassword1" className="mochalabel">CONFIRM PASSWORD</label>
+                                            <label for="exampleInputPassword1" className="mochalabel">Confirm Password</label>
                                             <input type="password" name="cpassword" className="form-control mochainput" id="exampleInputPassword1"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">Enter password</Form.Control.Feedback>
                                         </Form.Group>
@@ -133,15 +132,14 @@ class Register extends React.Component {
                                         <Form.Check
                                             type="switch"
                                             id="custom-switch"
-                                            label="PRIVACY POLICY, &nbsp; TERMS OF SERVICE"
-                                           
+                                            label="Privacy&nbsp;Policy, &nbsp; Terms&nbsp;Of&nbsp;Service"
                                             className="text-color"
                                             name="accept"
                                             required
                                             onClick={this.handleShow}
                                         />
-                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>SIGN ME UP</button>
-                                        <Link to="/login" className="btn form a">I Am Already A Member</Link>
+                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>Sign Up</button>
+                                        <Link to="/login" className="btn form a px-0 text-color">Already A Member</Link>
                                     </Form>
                                     {/* <span className="flow"> or connect with -
                                         <Nav.Link href="/"><i className="cl fa fa-facebook" aria-hidden="true"></i></Nav.Link>
@@ -149,6 +147,9 @@ class Register extends React.Component {
                                         <Nav.Link href="/"><i className="cl fa fa-twitter" aria-hidden="true"></i></Nav.Link>
                                         <Nav.Link href="/"><i className="cl fa fa-pinterest-p" aria-hidden="true"></i></Nav.Link>
                                     </span> */}
+                                </div>
+                                <div className="btohome">
+                                <a href="/"><p><i className="fa fa-arrow-circle-o-left float-left primary-color"></i><p className="float-left primary-color">Back To Home</p></p></a>
                                 </div>
                             </div>
 

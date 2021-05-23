@@ -53,33 +53,36 @@ class ForgotPass extends React.Component {
         return (
             <div>
                 {/* {this.state.isloading ? (<div className="loader"><img src = {loader} alt="loader"/></div>) : ''} */}
-                <div class="logsection signup">
-                    <div class="container">
-                        <div class="row itemcenter">
-                            <div class="col-sm-6 center ">
-                                <h4 class="sectionwel">WELCOME TO <br />DESIGNMOCHA.</h4>
-                                <a href="/" className="mochabtn bg">BACK TO HOME </a>
+                <div className="logsection signup">
+                    <div className="container">
+                        <div className="row itemcenter">
+                            <div className="col-sm-6 center ">
+                                <h4 className="sectionwel">WELCOME TO <br />DESIGNMOCHA.</h4>
                             </div>
-                            <div class="col-sm-6 form">
+                            <div className="col-sm-6 form">
                                 <div className="lflex">
                                     <Form noValidate validated={this.state.validated} onSubmit={this.formSubmit}>
                                         {!this.state.successMessage ? '' : (<p className="text-color">{this.state.successMessage}</p>)}
                                         {!this.state.isloading ? '' : (<p className="text-color">Loading please wait..</p>)}
                                         <Form.Group controlId="validationCustom01">
-                                            <label htmlFor="exampleInputEmail1" class="mochalabel">EMAIL</label>
-                                            <input type="email" name='email' class="form-control mochainput" id="exampleInputEmail1" aria-describedby="emailHelp"  onChange={this.handleChange} required />
+                                            <label htmlFor="exampleInputEmail1" className="mochalabel">Email Address</label>
+                                            <input type="email" name='email' className="form-control mochainput" id="exampleInputEmail1" aria-describedby="emailHelp"  onChange={this.handleChange} required />
                                             <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                         </Form.Group>
-                                       <br></br>
-                                        <button type="submit" class="mochabtn bg text-color" disabled={this.state.isloading}>FORGOT PASSWORD</button>
-                                        <Link to="/login" class="btn form a">LOGIN</Link>
+                                        <Form.Group>
+                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>Forgot Password</button>
+                                        <Link to="/login" className="btn form a px-0 text-color">Login</Link>
+                                        </Form.Group>
                                     </Form>
-                                    {/* <span class="flow"> or connect with -
-                                        <Nav.Link to="/"><i class="cl fa fa-facebook" aria-hidden="true"></i></Nav.Link>
-                                        <Nav.Link to="/"><i class="cl fa fa-instagram" aria-hidden="true"></i></Nav.Link>
-                                        <Nav.Link to="/"><i class="cl fa fa-twitter" aria-hidden="true"></i></Nav.Link>
-                                        <Nav.Link to="/"><i class="cl fa fa-pinterest-p" aria-hidden="true"></i></Nav.Link>
+                                    {/* <span className="flow"> or connect with -
+                                        <Nav.Link to="/"><i className="cl fa fa-facebook" aria-hidden="true"></i></Nav.Link>
+                                        <Nav.Link to="/"><i className="cl fa fa-instagram" aria-hidden="true"></i></Nav.Link>
+                                        <Nav.Link to="/"><i className="cl fa fa-twitter" aria-hidden="true"></i></Nav.Link>
+                                        <Nav.Link to="/"><i className="cl fa fa-pinterest-p" aria-hidden="true"></i></Nav.Link>
                                     </span> */}
+                                </div>
+                                <div className="btohome">
+                                <a href="/"><p><i className="fa fa-arrow-circle-o-left float-left primary-color"></i><p className="float-left primary-color">Back To Home</p></p></a>
                                 </div>
                             </div>
                         </div>

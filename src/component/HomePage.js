@@ -85,6 +85,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div class="parallax-window" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./images/section-back-1.png" data-natural-width="1400" data-natural-height="900"></div>
                 <div className="section-three parallax psection full-height">
                     <div className='container'>
                         <h3 className='text-color text-center'>First of it`s kind platform showcasing
