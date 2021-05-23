@@ -65,7 +65,7 @@ class HomePage extends React.Component {
                                 {/* <div id="div1" className="cursor"></div> */}
                                 <div className="container">
                                     <div className="slide-header">
-                                        <h3 className="text-color text-center">Our vision is to be India`s biggest design crowdsourcing platform..</h3>
+                                        <h1 className="text-color text-center">Our vision is to be India`s biggest design crowdsourcing platform..</h1>
                                     </div>
                                     <div className="scroll-down" title="scroll down"><p><img src={sdown} alt="scroll" /></p></div>
                                 </div>
