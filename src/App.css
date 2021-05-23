@@ -270,7 +270,7 @@ footer p {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 7px 0;
+  padding: 15px 0;
   z-index: 999;
 }
 .slide-menu {
@@ -523,7 +523,7 @@ footer .pleft {
 hr.line {
   width: 60%;
   color: red;
-  height: 2px;
+  height: 1px;
   opacity: unset;
   background-color: #231F20;
 }
@@ -544,7 +544,7 @@ hr.line {
 footer hr.line {
   width: 100%;
   color: #af4125;
-  height: 2px;
+  height: 1px;
   opacity: unset;
   background-color: #eae1cb;
 }
@@ -948,10 +948,10 @@ footer .nav-link {
   background-color: #ffffff !important;
 }
 .App.wrapper .fixed-top #site-header {
-  background-color: transparent !important;
+  background-color: #231F20 !important;
 }
-.wrapper .fixed-top #site-header a, .wrapper .fixed-top #site-header button{
-  color: #BD5828 !important;
+.App.wrapper .fixed-top #site-header a, .App.wrapper .fixed-top #site-header button{
+  color: #EAE1CB !important;
 }
 .App #site-header a, .App #site-header button{
   color: #EAE1CB !important;
@@ -1041,12 +1041,12 @@ div.ball{
 #stickytop .slide-menu a:hover, #stickytop .slide-menu button:hover {
     font-size: 14px;
     margin-top: 0px;
-    color: #BD5828 !important;
+    color: #af4125 !important;
 }
 #stickytop.fixed-top .slide-menu a:hover {
   font-size: 14px;
   margin-top: 0px;
-  color:  #606060!important;
+  color:  #af4125!important;
 }
 #stickytop .dropdown-menu a {
   color:  #606060!important;
@@ -1305,4 +1305,11 @@ background-color: aliceblue!important;
 }
 .wrapper #site-header a.active {
   color: #af4125 !important;
+}
+.App .slide-menu #home {
+  display: none !important;
+}
+.footer .copyright {
+  font-size: 12px !important;
+  color: #EAE1CB;
 }

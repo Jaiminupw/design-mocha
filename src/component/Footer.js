@@ -41,7 +41,7 @@ class Footer extends React.Component {
                             </div>
                         </div>
                         <center><hr className="line" />
-                            <h5>Breathing Crafts Private Limited © All rights reserved 2021</h5>
+                            <p className="copyright mb-0">Breathing Crafts Private Limited © All rights reserved 2021</p>
                         </center>
                     </div>
                 </footer>

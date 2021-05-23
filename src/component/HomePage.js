@@ -266,7 +266,6 @@ Branding,Fashion Design, Artistic Design, Digital Design..</h3>
                                 <a className="mochabtn bg text-color" href={(Cookies.get("session") !== undefined) ? "/explore" : "/register"}>JOIN FOR FREE</a>
                                 </center>
                             </div>
-                            
                         </div>
                     </div>
                 </section>

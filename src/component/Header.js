@@ -64,7 +64,7 @@ class Header extends React.Component {
                             <Nav className="mr-auto">
                                 <div className="nav-close"><i className="fa fa-close fa-2x float-right"></i></div>
                                 <Nav.Item>
-                                    <Nav.Link href="/" className={`px-3 ${(this.props.active==="home") ? "active" : ""}`}>Home</Nav.Link>
+                                    <Nav.Link href="/" id="home" className={`px-3 ${(this.props.active==="home") ? "active" : ""}`}>Home</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link href="/explore" className={`px-3 ${(this.props.active==="explore") ? "active" : ""}`}>Explore Work</Nav.Link>
