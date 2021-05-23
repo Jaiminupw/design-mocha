@@ -1081,8 +1081,11 @@ div.ball{
 .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
   box-shadow: none !important;
 }
-.cprofile form .form-group, .logsection form .form-group, .rsection form .form-group, .form-group {
+.cprofile form .form-group, .form-group {
   margin-bottom: 12px !important;
+}
+.logsection form .form-group, .rsection form .form-group {
+  margin-bottom: 2rem !important;
 }
 /* new css */
 .nav-link {

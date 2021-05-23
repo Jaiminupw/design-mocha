@@ -93,7 +93,7 @@ class Login extends React.Component {
                         <div className="row itemcenter">
                             <div className="col-sm-6 center ">
                                 <h4 className="sectionwel">WELCOME TO <br />DESIGNMOCHA.</h4>
-                                <a href="/" className="mochabtn bg login">BACK TO HOME </a>
+                                <a href="/" className="mochabtn bg login">Back To Home</a>
                             </div>
                             <div className="col-sm-6 form">
                                 <div className="lflex">
@@ -101,18 +101,23 @@ class Login extends React.Component {
                                         {!this.state.successMessage ? '' : (<p className="text-color">{this.state.successMessage}</p>)}
                                         {!this.state.isloading ? '' : (<p className="text-color">Loading please wait..</p>)}
                                         <Form.Group controlId="validationCustom01">
-                                            <label htmlFor="exampleInputEmail1" className="mochalabel">EMAIL ADDRESS</label>
-                                            <input type="text" autoComplete="off" name='email' className="form-control mochainput" id="exampleInputEmail1" aria-describedby="emailHelp"  onChange={this.handleChange} required />
+                                            <label htmlFor="exampleInputEmail1" className="mochalabel">Email Address</label>
+                                            <input type="email" autoComplete="off" name='email' className="form-control mochainput" id="exampleInputEmail1" aria-describedby="emailHelp"  onChange={this.handleChange} required />
                                             <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom02">
-                                            <label htmlFor="exampleInputPassword1" className="mochalabel">PASSWORD</label>
+                                            <label htmlFor="exampleInputPassword1" className="mochalabel">Password</label>
                                             <input type="password" autoComplete="new password" name='password' className="form-control mochainput" id="exampleInputPassword1"  onChange={this.handleChange} required />
                                             <Form.Control.Feedback type="invalid">please enter password</Form.Control.Feedback>
-                                        </Form.Group><br />
-                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>LOGIN</button>
-                                        <Link to="/register" className="btn form a">If you haven't member </Link>
-                                        <Link to='reset-password' className='btn form a forget'>FORGOT PASSWORD?</Link>
+                                        </Form.Group>
+                                        <Form.Group>
+                                        <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>Login</button>
+                                        <Link to="/register" className="btn form a text-color px-0">Create Account Now</Link>
+                                        </Form.Group>
+                                        <Form.Group>
+                                        <Link to='reset-password' className='btn form a forget ml-0 border-0 px-0 pt-0'>Forgot Password?</Link>
+                                        </Form.Group>
+                                        
                                     </Form>
                                     {/* <span className="flow"> or connect with -
                                         <Nav.Link to="/"><i className="cl fa fa-facebook" aria-hidden="true"></i></Nav.Link>
