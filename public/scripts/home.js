@@ -57,3 +57,11 @@ document.addEventListener("mousemove", function(event){
 //     // document.getElementById("#background-video").autoplay;
 //     // $("#background-video").trigger('play')
 // })
+
+$(".App.wrapper").on("scroll", function () {
+  if($(".slide-menu").css("maxWidth") == "100%") {
+    $(".slide-menu").css("maxWidth", "0%");
+    $(".slide-menu").css("opacity", "0");
+  }
+});
+  

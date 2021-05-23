@@ -1,4 +1,18 @@
 
+$(".nav-toggle").on("click", function () {
+  if($(".slide-menu").css("maxWidth") == "100%") {
+    $(".slide-menu").css("maxWidth", "0%");
+    $(".slide-menu").css("opacity", "0");
+  }
+  else {
+    $(".slide-menu").css("maxWidth", "100%");
+    $(".slide-menu").css("opacity", "100");
+  }
+})
+$(".nav-close").on("click", function() {
+  $(".slide-menu").css("maxWidth", "0%");
+  $(".slide-menu").css("opacity", "0");
+})
 $(document).ready(function () {
   if(document.getElementById("ctoggle")!==null) {
   document.getElementById("ctoggle").addEventListener('click', () => {

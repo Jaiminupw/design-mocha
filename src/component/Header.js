@@ -56,10 +56,10 @@ class Header extends React.Component {
                             <img src={siteLogo} alt="logo" />
                         </div>
                     </a>
-                    <div className='nav-toggle' onClick={this.menuToggle}>
+                    <div className='nav-toggle'>
                         <img src={toggleMenu} alt="nav-menu" />
                     </div>
-                    <div className="slide-menu" style={{ opacity: this.state.mdisplay, maxWidth: this.state.mwidth + "%" }}>
+                    <div className="slide-menu" style={{ opacity: 0, maxWidth: 0 + "%" }}>
                         <Navbar id="basic-navbar-nav">
                             <Nav className="mr-auto">
                                 <div className="nav-close" onClick={this.menuToggle}><i className="fa fa-close fa-2x float-right"></i></div>
