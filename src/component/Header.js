@@ -10,7 +10,7 @@ import { getProfile } from '../services/getProfile';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { mdisplay: 0, mwidth: 0, isAuth: "", user: {} };
+        this.state = {isAuth: "", user: {} };
     }
     menuToggle = () => {
         if (this.state.mdisplay === 0) {
@@ -62,7 +62,7 @@ class Header extends React.Component {
                     <div className="slide-menu" style={{ opacity: 0, maxWidth: 0 + "%" }}>
                         <Navbar id="basic-navbar-nav">
                             <Nav className="mr-auto">
-                                <div className="nav-close" onClick={this.menuToggle}><i className="fa fa-close fa-2x float-right"></i></div>
+                                <div className="nav-close"><i className="fa fa-close fa-2x float-right"></i></div>
                                 <Nav.Item>
                                     <Nav.Link href="/" className={`px-3 ${(this.props.active==="home") ? "active" : ""}`}>Home</Nav.Link>
                                 </Nav.Item>

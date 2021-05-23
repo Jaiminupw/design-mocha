@@ -8,6 +8,7 @@ import SliderVideo from '../images/slider-video.mp4'
 // import { Link } from 'react-router-dom';
 import '../big-counter.css'
 import { getAuth } from '../services/getAuth';
+import Cookies from 'js-cookie';
 // import axios from 'axios';
 class HomePage extends React.Component {
     constructor(props) {
@@ -262,7 +263,7 @@ Branding,Fashion Design, Artistic Design, Digital Design..</h3>
                             
                             <div className='container'>
                             <center>
-                                <a className="mochabtn bg text-color" href="/register">JOIN FOR FREE</a>
+                                <a className="mochabtn bg text-color" href={(Cookies.get("session") !== undefined) ? "/explore" : "/register"}>JOIN FOR FREE</a>
                                 </center>
                             </div>
                             
