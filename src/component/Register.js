@@ -3,7 +3,18 @@ import { Form, Modal, Button } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
 import '../css/register.css'
 import { RegisterMe } from '../services/RegisterMe';
+var passwordValidator = require('password-validator');
 var Cookies = require("js-cookie")
+var schema = new passwordValidator();
+schema
+.is().min(8)                                    // Minimum length 8
+.is().max(100)                                  // Maximum length 100
+.has().uppercase()                              // Must have uppercase letters
+.has().lowercase()                              // Must have lowercase letters
+.has().digits(2)                                // Must have at least 2 digits
+.has().not().spaces()                           // Should not have spaces
+.is().not().oneOf(['Passw0rd', 'Password123'])
+.is().symbols(); // Blacklist these values
 class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +24,9 @@ class Register extends React.Component {
             show: false,
             accept: false,
             registered: false,
-            validated: false
+            validated: false,
+            acd: "none",
+            acMessage: ""
         };
     }
     handleShow = () => {
@@ -28,18 +41,42 @@ class Register extends React.Component {
         this.setState({ show: false })
     }
     handleChange = async (e) => {
+        if(e.target.name === "accept") {
+            await this.setState({ [e.target.name]: e.target.checked })
+            this.setState({ successMessage: "" })
+        }
         await this.setState({ [e.target.name]: e.target.value })
         this.setState({ successMessage: "" })
     }
     formSubmit = (e) => {
         e.preventDefault();
+        this.setState({acd: "none"})
+        console.log(this.state.accept)
         const form = e.currentTarget;
-        if (form.checkValidity() === false) {
+        if(this.state.accept === false) {
+            this.setState({acd: "block", acMessage: "Please accept Privacy Policy and Terms of Services"})
+        }
+        else if (form.checkValidity() === false) {
             e.preventDefault();
             e.stopPropagation();
         }
         else {
-            if (this.state.password !== this.state.cpassword) {
+            var vpass = schema.validate(this.state.password, {list: true})
+            if(vpass.length !== 0) {
+                if(vpass[1] === "uppercase"){
+                    this.setState({successMessage: "Password must include atleast one uppercase letter"})
+                }
+                else if(vpass[1] === "digits"){
+                    this.setState({successMessage: "Password must contain atleast two numbers"})
+                }
+                else if(vpass[1] === "symbols"){
+                    this.setState({successMessage: "Password must contain symbols"})
+                }
+                else {
+                    this.setState({successMessage: "Password lenth must be minimum 8 charachters"})
+                }
+            }
+            else if (this.state.password !== this.state.cpassword) {
                 this.setState({ successMessage: "Password doesn't match" })
             }
             else if(this.state.username.split(" ")[1]){
@@ -116,7 +153,7 @@ class Register extends React.Component {
                                         <Form.Group controlId="validationCustom02">
                                             <label for="exampleInputEmail1" className="mochalabel"> Email Address</label>
                                             <input type="email" name="email" className="form-control mochainput " id="exampleInputEmail1" aria-describedby="Email"  required onChange={this.handleChange} />
-                                            <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
+                                            <Form.Control.Feedback type="invalid">Enter valid Email Address</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom03">
                                             <label for="exampleInputPassword1" className="mochalabel">Password</label>
@@ -129,6 +166,7 @@ class Register extends React.Component {
                                             <Form.Control.Feedback type="invalid">Enter password</Form.Control.Feedback>
                                         </Form.Group>
                                         <br />
+                                        <Form.Group controlId="validationCustom04">
                                         <Form.Check
                                             type="switch"
                                             id="custom-switch"
@@ -138,6 +176,8 @@ class Register extends React.Component {
                                             required
                                             onClick={this.handleShow}
                                         />
+                                        <Form.Control.Feedback type="invalid" style={{display: this.state.acd}}>{this.state.acMessage}</Form.Control.Feedback>
+                                        </Form.Group>
                                         <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>Sign Up</button>
                                         <Link to="/login" className="btn form a px-0 text-color">Already A Member</Link>
                                     </Form>

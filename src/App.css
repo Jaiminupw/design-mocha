@@ -466,6 +466,11 @@ footer .pleft {
 .section-twelve .container{
   display: flex;
 }
+@media only screen and (max-width: 1680px) {
+  .parallax::after {
+    transform: translateZ(-1.8px) scale(1.7);
+  }
+}
 .parallax::after {
   content: " ";
   position: absolute;
@@ -473,14 +478,13 @@ footer .pleft {
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateZ(-1.6px) scale(1.7);
   background-size: 100%;
   z-index: -1;
 }
     .wrapper {
       height: 100vh;
       overflow-x: hidden;
-      perspective: 2.4px;
+      perspective: 4px;
     }
 @media screen and (min-height: 1024px) {
   .wrapper {
@@ -582,9 +586,9 @@ footer .nav-link {
   display: none;
 }
 /* Responsive CSS */
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 1920px) and (min-width: 1680px) {
   .parallax::after {
-    transform: translateZ(-0.7px) scale(1.6);
+    transform: translateZ(-1.6px) scale(1.7);
   }
 }
 @media only screen and (max-width: 1024px) {

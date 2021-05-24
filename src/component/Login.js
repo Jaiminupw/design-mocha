@@ -17,7 +17,8 @@ class Login extends React.Component {
         this.state = {
             isloggedin: false,
             Redirect: "false",
-            validated: false
+            validated: false,
+            pdisplay: false
         };
     }
     handleChange = async (e) => {
@@ -76,6 +77,9 @@ class Login extends React.Component {
         }
         this.setState({ validated: true })
     }
+    showPass = () => {
+        this.setState({pdisplay: !this.state.pdisplay})
+    }
     render() {
         if (this.state.Redirect === "false") {
             if (this.state.isloggedin === true) {
@@ -106,8 +110,18 @@ class Login extends React.Component {
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom02">
                                             <label htmlFor="exampleInputPassword1" className="mochalabel">Password</label>
-                                            <input type="password" autoComplete="new password" name='password' className="form-control mochainput" id="exampleInputPassword1" onChange={this.handleChange} required />
+                                            <input type={this.state.pdisplay ? "text" : "password"} autoComplete="new password" name='password' className="form-control mochainput" id="exampleInputPassword1" onChange={this.handleChange} required />
                                             <Form.Control.Feedback type="invalid">Please Enter Password</Form.Control.Feedback>
+                                        </Form.Group>
+                                        <Form.Group controlId="validationCustom04">
+                                        <Form.Check
+                                            type="checkbox"
+                                            id="custom-checkbox"
+                                            label="Show &nbsp; Password"
+                                            className="text-color"
+                                            name="accept"
+                                            onClick={this.showPass}
+                                        />
                                         </Form.Group>
                                         <Form.Group>
                                             <button type="submit" className="mochabtn bg text-color" disabled={this.state.isloading}>Login</button>
