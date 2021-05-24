@@ -26,7 +26,8 @@ class Register extends React.Component {
             registered: false,
             validated: false,
             acd: "none",
-            acMessage: ""
+            acMessage: "",
+            pdisplay: false
         };
     }
     handleShow = () => {
@@ -120,6 +121,9 @@ class Register extends React.Component {
         }
         this.setState({validated: true})
     }
+    showPass = () => {
+        this.setState({pdisplay: !this.state.pdisplay})
+    }
     render() {
         if (this.state.registered) {
             return <Redirect
@@ -157,15 +161,24 @@ class Register extends React.Component {
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom03">
                                             <label for="exampleInputPassword1" className="mochalabel">Password</label>
-                                            <input type="password" name="password" className="form-control mochainput " id="exampleInputPassword1"  required onChange={this.handleChange} />
+                                            <input type={this.state.pdisplay ? "text" : "password"} name="password" className="form-control mochainput " id="exampleInputPassword1"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">Password is required</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom04">
                                             <label for="exampleInputPassword1" className="mochalabel">Confirm Password</label>
-                                            <input type="password" name="cpassword" className="form-control mochainput" id="exampleInputPassword1"  required onChange={this.handleChange} />
+                                            <input type={this.state.pdisplay ? "text" : "password"} name="cpassword" className="form-control mochainput" id="exampleInputPassword1"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">Enter password</Form.Control.Feedback>
                                         </Form.Group>
-                                        <br />
+                                        <Form.Group controlId="validationCustom05">
+                                        <Form.Check
+                                            type="checkbox"
+                                            id="custom-checkbox"
+                                            label="Show Password"
+                                            className="text-color"
+                                            name="accept"
+                                            onClick={this.showPass}
+                                        />
+                                        </Form.Group>
                                         <Form.Group controlId="validationCustom04">
                                         <Form.Check
                                             type="switch"

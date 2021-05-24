@@ -106,18 +106,18 @@ class Login extends React.Component {
                                         <Form.Group controlId="validationCustom01">
                                             <label htmlFor="exampleInputEmail1" className="mochalabel">Email Address</label>
                                             <input type="email" autoComplete="off" name='email' className="form-control mochainput" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={this.handleChange} required />
-                                            <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
+                                            <Form.Control.Feedback type="invalid">Enter valid Email Address</Form.Control.Feedback>
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom02">
                                             <label htmlFor="exampleInputPassword1" className="mochalabel">Password</label>
                                             <input type={this.state.pdisplay ? "text" : "password"} autoComplete="new password" name='password' className="form-control mochainput" id="exampleInputPassword1" onChange={this.handleChange} required />
                                             <Form.Control.Feedback type="invalid">Please Enter Password</Form.Control.Feedback>
                                         </Form.Group>
-                                        <Form.Group controlId="validationCustom04">
+                                        <Form.Group controlId="validationCustom03">
                                         <Form.Check
                                             type="checkbox"
                                             id="custom-checkbox"
-                                            label="Show &nbsp; Password"
+                                            label="Show Password"
                                             className="text-color"
                                             name="accept"
                                             onClick={this.showPass}

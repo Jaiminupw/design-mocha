@@ -585,6 +585,9 @@ footer .nav-link {
 .nav-close {
   display: none;
 }
+.form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
+  color: #EAE1CB !important;
+}
 /* Responsive CSS */
 @media only screen and (max-width: 1920px) and (min-width: 1680px) {
   .parallax::after {
