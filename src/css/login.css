@@ -286,7 +286,6 @@ i.cl:hover {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-
 .lflex p {
     padding: 4px 0px;
     padding-bottom: 15px !important;
@@ -309,11 +308,7 @@ i.cl:hover {
 }
 /* Responsive CSS */
 @media only screen and (max-width:768px) {
-    .lflex {
-        min-height: 350px;
-        height: auto;
-    }
-   
+
     .logsection .col-sm-6.center, .rsection .col-sm-6.center{
         height: auto !important;
         min-height: 300px;}
@@ -338,14 +333,10 @@ i.cl:hover {
     .itemcenter .btn.form.a {
         margin-left: 0;
     } 
-    .logsection .col-sm-6.form {
-        min-height: 400px;
-        height: auto;
-    }
 }
 @media only screen and (max-width:600px) {
-    .lflex {
-        height: 380px;
+    .logsection .mochabtn, .rsection .mochabtn {
+        width: 100% !important;
     }
     .sectionwel {
         font-size: 40px;
@@ -367,12 +358,23 @@ i.cl:hover {
     .itemcenter .btn.form.a {
         margin-left: 0;
     } 
-   .logsection .col-sm-6.form {
-        height: 480px;
+   .logsection .col-sm-6.form, .rsection .col-sm-6.form {
+        min-height: auto;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        padding-bottom: 40px;
+    }
+    .logsection .col-sm-6.form {
+        padding:40px 40px 60px !important;
+    }
+    .rsection .col-sm-6.form {
+        padding:40px 40px 80px !important;
+    }
+    .btohome {
+        padding-left: 55px !important;
+    }
+    .logsection form .form-group, .rsection form .form-group {
+        margin-bottom: 1.5rem !important;
     }
     .logsection .flow {
         bottom: 10px !important;

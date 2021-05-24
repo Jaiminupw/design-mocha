@@ -70,25 +70,7 @@ element.style {
 .rsection .form-control:focus {
     color: #AF4125 !important;
 }
-@media only screen and (max-width:1024px) {
-   .rsection form {
-        padding: 0px 30px !important;
-    }
-}
 
-/* Responsive CSS */
-@media only screen and (max-width:600px) {
-    .rflex {
-        min-height: 400px !important;
-    }
-    .rsection .col-sm-6.form {
-        min-height: 600px !important;
-        padding-bottom: 40px !important;
-    }
-    .rflex .flow {
-        bottom: 10px !important;
-    }
-}
 @media only screen and (max-width:768px) {
     .sectionwel {
         font-size: 40px;
@@ -109,10 +91,6 @@ element.style {
     }
     .itemcenter .btn.form.a {
         margin-left: 0;
-    }
-    .rflex {
-        min-height: 350px;
-        height: auto;
     }
 }
 @media only screen and (max-width:600px) {
@@ -135,9 +113,6 @@ element.style {
     }
     .itemcenter .btn.form.a {
         margin-left: 0;
-    }
-    .lflex {
-        height: 350px;
     }
 }
 @media only screen and (max-width:360px) {

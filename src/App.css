@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: 'Athelas' !important;
   overflow-x: hidden;
-  background-color: #EAE1CB;
+  background-color: #EAE1CB !important;
 }
 a {
   color: inherit;
@@ -484,7 +484,7 @@ footer .pleft {
     }
 @media screen and (min-height: 1024px) {
   .wrapper {
-    perspective: 1.9px !important;
+    perspective: 2.2px !important;
   }
 }
 .psection { 
@@ -584,7 +584,7 @@ footer .nav-link {
 /* Responsive CSS */
 @media only screen and (max-width: 1920px) {
   .parallax::after {
-    transform: translateZ(-1.2px) scale(1.8);
+    transform: translateZ(-0.7px) scale(1.6);
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -687,8 +687,8 @@ footer .nav-link {
 .parallax::after {
   background-size: cover;
   background-repeat: no-repeat;
-  transform: translateZ(-0.2px) scale(1.5);
-  -webkit-transform: translateZ(-0.2px) scale(1.5);
+  transform: translateZ(-0.6px) scale(1.5);
+  -webkit-transform: translateZ(-0.6px) scale(1.5);
   margin-bottom: 10px;
 }
 .wrapper {
@@ -800,7 +800,7 @@ footer .nav-link {
 .parallax::after {
   background-size: cover;
   background-repeat: no-repeat;
-  transform: translateZ(-0.3px) scale(1.5);
+  transform: translateZ(-0.6px) scale(1.8);
   margin-bottom: 10px;
 }
 .sectione2 p {
