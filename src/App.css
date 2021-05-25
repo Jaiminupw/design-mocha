@@ -10,13 +10,13 @@ body {
   background-color: #EAE1CB !important;
 }
 .react-parallax .full-height {
-  height: 700px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .react-parallax {
-  height: 700px !important;
+  height: 100vh !important;
 }
 .react-parallax img{
   bottom: 0;
