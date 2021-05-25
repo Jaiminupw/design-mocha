@@ -21,13 +21,14 @@ class Header extends React.Component {
         }
     }
     async componentDidMount() {
-        getProfile().then(async (res) => {
-            await this.setState({ user: res.data })
-            console.log("user", this.state.user)
-        })
+        var auth = getAuth()
         var auth = getAuth()
         if (auth === true) {
             await this.setState({ isAuth: "Logout" })
+            getProfile().then(async (res) => {
+                await this.setState({ user: res.data })
+                console.log("user", this.state.user)
+            })
         }
         const mscript = document.createElement("script");
         mscript.src = "/scripts/main.js";
