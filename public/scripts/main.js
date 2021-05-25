@@ -1,5 +1,16 @@
-
-$(".nav-toggle").on("click", function () {
+document.addEventListener('scroll', function() {
+    if (document.documentElement.scrollTop > 50) {
+      document.getElementById('stickytop').classList.add('fixed-top');
+      // add padding top to show content behind navbar
+      navbar_height = document.querySelector('#stickytop').offsetHeight;
+      // document.body.style.paddingTop = navbar_height + 'px';
+    } else {
+      document.getElementById('stickytop').classList.remove('fixed-top');
+       // remove padding top from body
+      document.body.style.paddingTop = '0';
+    } 
+});
+ $(".nav-toggle").on("click", function () {
   if($(".slide-menu").css("maxWidth") == "100%") {
     $(".slide-menu").css("maxWidth", "0%");
     $(".slide-menu").css("opacity", "0");
@@ -47,19 +58,6 @@ $(".scroll-down").click(function () {
   var $scrollTo = $('.sectione1');
   $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0 }, 300);
 })
-var dc = document.getElementsByClassName("wrapper")[0]
-dc.addEventListener('scroll', function() {
-    if (dc.scrollTop > 50) {
-      document.getElementById('stickytop').classList.add('fixed-top');
-      // add padding top to show content behind navbar
-      navbar_height = document.querySelector('#stickytop').offsetHeight;
-      // document.body.style.paddingTop = navbar_height + 'px';
-    } else {
-      document.getElementById('stickytop').classList.remove('fixed-top');
-       // remove padding top from body
-      document.body.style.paddingTop = '0';
-    } 
-});
 if(window.location.pathname !== "/") {
   document.getElementsByClassName("pace")[0].style.display = "none !important"
 }

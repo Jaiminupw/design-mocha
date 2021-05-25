@@ -59,7 +59,7 @@ document.addEventListener("mousemove", function(event){
 //     // $("#background-video").trigger('play')
 // })
 
-$(".App").on("scroll", function () {
+document.addEventListener("scroll", function () {
   if($(".slide-menu").css("maxWidth") == "100%") {
     $(".slide-menu").css("maxWidth", "0%");
     $(".slide-menu").css("opacity", "0");
