@@ -118,7 +118,7 @@ class Login extends React.Component {
                                             type="checkbox"
                                             id="custom-checkbox"
                                             label="Show Password"
-                                            className="text-color"
+                                            className="text-color form-check-warning"
                                             name="accept"
                                             onClick={this.showPass}
                                         />

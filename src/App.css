@@ -9,6 +9,22 @@ body {
   overflow-x: hidden;
   background-color: #EAE1CB !important;
 }
+.react-parallax .full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.react-parallax-content {
+  background-color: rgba(0,0,0, 0.15);
+}
+.section-3 h3 {
+  max-width: 85%;
+  margin: auto;
+}
+.section-32 h3 {
+  padding: 0 140px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -481,11 +497,11 @@ footer .pleft {
   background-size: 100%;
   z-index: -1;
 }
-    .wrapper {
+    /* .wrapper {
       height: 100vh;
       overflow-x: hidden;
       perspective: 4px;
-    }
+    } */
 @media screen and (min-height: 1024px) {
   .wrapper {
     perspective: 2.2px !important;
@@ -498,6 +514,12 @@ footer .pleft {
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
+}
+.react-parallax {
+  height: 100vh !important;
+}
+.react-parallax img{
+  bottom: 0;
 }
 .static {
   background: red;
@@ -1293,4 +1315,7 @@ background-color: aliceblue!important;
 }
 .top-banner {
   margin-top: 70px !important;
+}
+input[type="checkbox"]:checked + label::after {
+  background-color: #af4125 !important;
 }

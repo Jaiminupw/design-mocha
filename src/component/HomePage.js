@@ -9,7 +9,7 @@ import SliderVideo from '../images/slider-video.mp4'
 import '../big-counter.css'
 import { getAuth } from '../services/getAuth';
 import Cookies from 'js-cookie';
-// import axios from 'axios';
+import { Parallax } from 'react-parallax'
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -85,12 +85,16 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="section-three parallax psection full-height">
-                    <div className='container'>
-                        <h3 className='text-color text-center'>First of it`s kind platform showcasing
-Indian design & creative talent to the world..</h3>
+                <Parallax
+                    bgImage={require('../images/bg-2.png')}
+                    bgImageAlt="the dog"
+                    strength={450}
+                >
+                    <div className="section-3 full-height container">
+                    <h3 className='text-color text-center' style={{paddingTop: 11 + "rem", paddingBottom: 11 + "rem"}}>First of it`s kind platform showcasing
+                    Indian design & creative talent to the world..</h3>
                     </div>
-                </div>
+                </Parallax>
                 <div className="section-even sectione3">
                     <div className="container">
                         <div className="row">
@@ -101,11 +105,15 @@ Indian design & creative talent to the world..</h3>
                         </div>
                     </div>
                 </div>
-                <div className="section-three2 parallax psection full-height">
-                    <div className='container'>
-                        <h3 className='text-color text-center'>A platform to address unique Indian needs.</h3>
+                <Parallax
+                    bgImage={require('../images/slide-4.png')}
+                    bgImageAlt="the dog"
+                    strength={450}
+                >
+                    <div className="section-32 full-height container">
+                    <h3 className='text-color text-center'>A platform to address unique Indian needs.</h3>
                     </div>
-                </div>
+                </Parallax>
                 <div className="section-even sectione2">
                     <div className="container">
                         <div className="row">
@@ -121,11 +129,15 @@ Indian design & creative talent to the world..</h3>
                         </div>
                     </div>
                 </div>
-                <div className="section-five parallax psection full-height">
-                    <div className='container'>
-                        <h3 className='text-color text-center'>A community of creative minds.</h3>
+                <Parallax
+                    bgImage={require('../images/slide-5.png')}
+                    bgImageAlt="the dog"
+                    strength={450}
+                >
+                    <div className="full-height container">
+                    <h3 className='text-color text-center'>A community of creative minds.</h3>
                     </div>
-                </div>
+                </Parallax>
                 <div className="section-even sectione3">
                     <div className="container">
                         <div className="row">
@@ -138,12 +150,15 @@ Indian design & creative talent to the world..</h3>
                     </div>
                 </div>
                 <section>
-                    <div className="section-three secthree parallax psection full-height">
-                        <div className='container'>
-                            <h3 className='text-color text-center'>Design services offered in multiple categories.
-Branding,Fashion Design, Artistic Design, Digital Design..</h3>
-                        </div>
+                <Parallax
+                    bgImage={require('../images/bg-2.png')}
+                    bgImageAlt="the dog"
+                    strength={450}
+                >
+                    <div className="section-3 full-height container">
+                    <h3 className='text-color text-center'>Design services offered in multiple categories. Branding,Fashion Design, Artistic Design, Digital Design..</h3>
                     </div>
+                </Parallax>
                 </section>
                 <section>
                     <div className="section-four">
@@ -260,10 +275,10 @@ Branding,Fashion Design, Artistic Design, Digital Design..</h3>
                             </div>
                         </div>
                         <div className="section-twelve">
-                            
+
                             <div className='container'>
-                            <center>
-                                <a className="mochabtn bg text-color" href={(Cookies.get("session") !== undefined) ? "/explore" : "/register"}>JOIN FOR FREE</a>
+                                <center>
+                                    <a className="mochabtn bg text-color" href={(Cookies.get("session") !== undefined) ? "/explore" : "/register"}>JOIN FOR FREE</a>
                                 </center>
                             </div>
                         </div>
