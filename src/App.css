@@ -572,10 +572,10 @@ footer .nav-link {
     padding: 0px 0px;
   }
   .react-parallax .full-height {
-    height: 600px !important;
+    height: 100vh !important;
   }
   .react-parallax {
-    height: 600px !important;
+    height: 100vh !important;
   }
   #mwork button {
     width: 100% !important;
