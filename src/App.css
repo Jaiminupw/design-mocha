@@ -10,7 +10,7 @@ body {
   background-color: #EAE1CB !important;
 }
 .react-parallax .full-height {
-  height: 100vh;
+  height: 100vh !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -629,7 +629,7 @@ footer .nav-link {
     padding: 0px 0px;
   }
   .react-parallax .full-height {
-    height: 600px;;
+    height: 600px !important;
   }
   .react-parallax {
     height: 600px !important;
