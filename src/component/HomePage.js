@@ -10,7 +10,6 @@ import '../big-counter.css'
 import { getAuth } from '../services/getAuth';
 import Cookies from 'js-cookie';
 import { Parallax } from 'react-parallax'
-import { Scroll } from './Scroll';
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
