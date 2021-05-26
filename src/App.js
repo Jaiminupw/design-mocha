@@ -5,9 +5,7 @@ import HomePage from './component/HomePage';
 class App extends PureComponent {
   constructor(props) {
     super(props)
-
     this.state = {
-      scroll: false
     }
   }
   render() {
