@@ -16,15 +16,12 @@ class HomePage extends React.Component {
         this.state = { loading: true, refresh: true };
     }
     componentDidMount() {
-        // axios.get("/slider-video.mp4").then(() => {
-        //     this.setState({loading: false})
-        // })
         getAuth();
         var page = document.getElementsByClassName("main-section")[0];
         const script = document.createElement("script");
         script.id = "hscript";
         script.src = "/scripts/home.js";
-        script.async = true;
+        script.async = true; 
         page.insertBefore(script, page.childNodes[0])
         const mscript = document.createElement("script");
         mscript.src = "/scripts/main.js";
