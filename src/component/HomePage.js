@@ -10,6 +10,7 @@ import '../big-counter.css'
 import { getAuth } from '../services/getAuth';
 import Cookies from 'js-cookie';
 import { Parallax } from 'react-parallax'
+import bg2 from '../images/bg-2.png'
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -83,7 +84,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Parallax bgImage={require('../images/bg-2.png')} strength={500}>
+                    <Parallax bgImage={bg2} strength={500}>
                         <div>
                             <div className="section-3 full-height container">
                                 <h3 className='text-color text-center'>First of it`s kind platform showcasing
