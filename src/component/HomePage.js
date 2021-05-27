@@ -86,7 +86,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Parallax bgImage={bg2} strength={500}>
+                    <Parallax bgImage={bg2} strength={300}>
                         <div>
                             <div className="section-3 full-height container">
                                 <h3 className='text-color text-center'>First of it`s kind platform showcasing
@@ -104,7 +104,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Parallax bgImage={bg3} strength={500}>
+                    <Parallax bgImage={bg3} strength={300}>
                         <div>
                             <div className="section-32 full-height container">
                                 <h3 className='text-color text-center'>A platform to address unique Indian needs.</h3>
@@ -126,7 +126,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Parallax bgImage={bg4} strength={500}>
+                    <Parallax bgImage={bg4} strength={300}>
                         <div>
                             <div className="full-height container">
                                 <h3 className='text-color text-center'>A community of creative minds.</h3>
@@ -144,7 +144,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Parallax bgImage={bg2} strength={500}>
+                    <Parallax bgImage={bg2} strength={300}>
                         <div>
                             <div className="section-3 full-height container">
                                 <h3 className='text-color text-center'>Design services offered in multiple categories. Branding,Fashion Design, Artistic Design, Digital Design..</h3>
