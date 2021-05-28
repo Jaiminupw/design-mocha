@@ -159,25 +159,21 @@ class Register extends React.Component {
                                             <input type="email" name="email" className="form-control mochainput " id="exampleInputEmail1" aria-describedby="Email"  required onChange={this.handleChange} />
                                             <Form.Control.Feedback type="invalid">Enter valid Email Address</Form.Control.Feedback>
                                         </Form.Group>
-                                        <Form.Group controlId="validationCustom03">
+                                        <Form.Group controlId="validationCustom03" className="prelative">
                                             <label for="exampleInputPassword1" className="mochalabel">Password</label>
                                             <input type={this.state.pdisplay ? "text" : "password"} name="password" className="form-control mochainput " id="exampleInputPassword1"  required onChange={this.handleChange} />
+                                            <div className="show-pass" onClick={this.showPass}>
+                                                <i className="fa fa-eye primary-color"></i>
+                                            </div>
                                             <Form.Control.Feedback type="invalid">Password is required</Form.Control.Feedback>
                                         </Form.Group>
-                                        <Form.Group controlId="validationCustom04">
+                                        <Form.Group controlId="validationCustom04" className="prelative">
                                             <label for="exampleInputPassword1" className="mochalabel">Confirm Password</label>
                                             <input type={this.state.pdisplay ? "text" : "password"} name="cpassword" className="form-control mochainput" id="exampleInputPassword1"  required onChange={this.handleChange} />
+                                            {/* <div className="show-pass" onClick={this.showPass}>
+                                                <i className="fa fa-eye primary-color"></i>
+                                            </div> */}
                                             <Form.Control.Feedback type="invalid">Enter password</Form.Control.Feedback>
-                                        </Form.Group>
-                                        <Form.Group controlId="validationCustom05">
-                                        <Form.Check
-                                            type="checkbox"
-                                            id="custom-checkbox"
-                                            label="Show Password"
-                                            className="text-color"
-                                            name="accept"
-                                            onClick={this.showPass}
-                                        />
                                         </Form.Group>
                                         <Form.Group controlId="validationCustom04">
                                         <Form.Check

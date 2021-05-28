@@ -23,14 +23,12 @@ class Header extends React.Component {
     }
     async componentDidMount() {
         var auth = getAuth()
-        console.log(auth);
         if (auth === true) {
             await this.setState({ isAuth: "Logout" })
         }
         if(Cookies.get("session")!==undefined) {
             getProfile().then(async (res) => {
                 await this.setState({ user: res.data })
-                console.log("user", this.state.user)
             })
         }
         const mscript = document.createElement("script");

@@ -92,19 +92,19 @@ class CreateProfile extends React.Component {
             e.stopPropagation();
         }
         else {
-        this.setState({ cloading: "Loading please wait..." })
-        var djourney = { ...this.state.djourney }
-        await this.setState({ djourney: djourney })
-        updateProfile(this.state.djourney)
-            .then((res) => {
-                this.setState({ cloading: "Profile has been updated successfully" })
-            })
-            .catch((err) => {
-                if (err.response.data.detail === "Illegal session cookie provided: None. session cookie must be a non-empty string.") {
-                    this.setState({ cloading: "Session Expired Please Login" })
-                    this.setState({ isAuthenticated: false })
-                }
-            })
+            this.setState({ cloading: "Loading please wait..." })
+            var djourney = { ...this.state.djourney }
+            await this.setState({ djourney: djourney })
+            updateProfile(this.state.djourney)
+                .then((res) => {
+                    this.setState({ cloading: "Profile has been updated successfully" })
+                })
+                .catch((err) => {
+                    if (err.response.data.detail === "Illegal session cookie provided: None. session cookie must be a non-empty string.") {
+                        this.setState({ cloading: "Session Expired Please Login" })
+                        this.setState({ isAuthenticated: false })
+                    }
+                })
         }
         this.setState({ bvalidated: true })
     }
@@ -205,7 +205,7 @@ class CreateProfile extends React.Component {
         await this.setState({ basicInfo: basicInfo })
     }
     portfolioInput = async (e) => {
-        this.setState({prbtn: false})
+        this.setState({ prbtn: false })
         var portfolio = { ...this.state.portfolio }
         portfolio[e.target.name] = e.target.value
         await this.setState({ portfolio: portfolio })
@@ -240,13 +240,13 @@ class CreateProfile extends React.Component {
         if (form.checkValidity() === false) {
             e.preventDefault();
             e.stopPropagation();
-            if(this.state.media.length === 0) {
-                this.setState({pfileName: "please select porfolio images"})
+            if (this.state.media.length === 0) {
+                this.setState({ pfileName: "please select porfolio images" })
             }
         }
         else {
-            if(this.state.media.length === 0) {
-                this.setState({pfileName: "please select porfolio images"})
+            if (this.state.media.length === 0) {
+                this.setState({ pfileName: "please select porfolio images" })
             }
             this.setState({ pmsg: "Please wait...", prbtn: true })
             var data = {
@@ -267,7 +267,7 @@ class CreateProfile extends React.Component {
                     this.setState({ pmsg: "something went wrong", prbtn: false })
                 })
         }
-        this.setState({cvalidated: true})
+        this.setState({ cvalidated: true })
     }
     handleOthers = async (e) => {
         if (e.target.checked) {
@@ -493,26 +493,26 @@ class CreateProfile extends React.Component {
                             <Link to="" className="text-color lgout" onClick={this.LogoutMe}>Logout</Link>
                             <Modal show={this.state.show} onHide={this.handleClose} centered size="lg" className="cmodal">
                                 <Modal.Header closeButton>
-                                    <Modal.Title className="cmtitle text-center w-100"></Modal.Title>
+                                    <Modal.Title className="cmtitle text-center w-100">
+                                        <div className="d-flex align-items-center">
+                                            <div class="upload-btn-wrapper">
+                                                <label class="mochabtn bg float-left" htmlFor="cupload" >Upload a file</label>
+                                                <input type="file" name="myfile" id="cupload" onChange={this.selectFile} disabled={this.state.fbtn} />
+                                                <p class="float-left mb-0 primary-color" style={{padding: 10 + "px"}}>Select from default avatars</p>
+                                                <p className="font-roboto mb-0 w-100 float-left text-left">{this.state.fileName}</p>
+                                                <p className="font-arial mb-0 w-100 float-left text-left">{this.state.fileError}</p>
+                                            </div>
+                                        </div>
+                                    </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <div className="select-av">
-                                        <h3 class="text-center">Select from default avatars</h3>
                                         <div className="default-av">
                                             {
                                                 this.state.avatars.map((avatar) => {
-                                                    return <img src={avatar} className="rounded-circle float-left mr-3" alt="avatar" width="80px" onClick={this.selectAvatar} />
+                                                    return <img src={avatar} className="rounded-circle float-left mr-3 mb-3" alt="avatar" width="80px" onClick={this.selectAvatar} />
                                                 })
                                             }
-                                        </div>
-                                        <h3 class="text-center mt-4">Upload your own</h3>
-                                        <div className="d-flex justify-content-center text-center">
-                                            <div class="upload-btn-wrapper">
-                                                <label class="mochabtn bg" htmlFor="cupload" >Upload a file</label>
-                                                <input type="file" name="myfile" id="cupload" onChange={this.selectFile} disabled={this.state.fbtn} />
-                                                <p className="text-center font-roboto">{this.state.fileName}</p>
-                                                <p className="text-center">{this.state.fileError}</p>
-                                            </div>
                                         </div>
                                     </div>
                                 </Modal.Body>
@@ -575,11 +575,11 @@ class CreateProfile extends React.Component {
                                                     </Form.Group>
                                                 </Row>
                                                 <Row>
-                                                <Form.Group as={Col} sm="6" controlId="validationCustom03">
+                                                    <Form.Group as={Col} sm="6" controlId="validationCustom03">
                                                         <Form.Label>Address</Form.Label>
                                                         <Form.Control name="address" placeholder="Your Full Address" value={this.state.basicInfo ? this.state.basicInfo.address : ''} onChange={this.handleInput} />
-                                                </Form.Group>
-                                                <Form.Group as={Col} sm="6" controlId="validationCustom03">
+                                                    </Form.Group>
+                                                    <Form.Group as={Col} sm="6" controlId="validationCustom03">
                                                         <Form.Label>State</Form.Label>
                                                         <Form.Control name="state" as="select" defaultValue="select" onChange={this.handleInput}>
                                                             <option>Select State</option>
@@ -587,18 +587,18 @@ class CreateProfile extends React.Component {
                                                                 return (<option value={state.name} selected={((this.state.basicInfo) && (this.state.basicInfo.state === state.name)) ? "selected" : false}>{state.name}</option>)
                                                             })}
                                                         </Form.Control>
-                                                        </Form.Group>
+                                                    </Form.Group>
                                                 </Row>
                                                 <Row>
-                                                <Form.Group as={Col} sm="6" controlId="validationCustom03">
+                                                    <Form.Group as={Col} sm="6" controlId="validationCustom03">
                                                         <Form.Label>Pincode</Form.Label>
                                                         <Form.Control name="pin_code" placeholder="Enter Pincode" value={this.state.basicInfo ? this.state.basicInfo.pin_code : ''} onChange={this.handleInput} />
-                                                     </Form.Group>
+                                                    </Form.Group>
 
-                                                     <Form.Group as={Col} sm="6" controlId="validationCustom03">
+                                                    <Form.Group as={Col} sm="6" controlId="validationCustom03">
                                                         <Form.Label>City</Form.Label>
                                                         <Form.Control name="city" placeholder="Enter City Name" value={this.state.basicInfo ? this.state.basicInfo.city : ''} onChange={this.handleInput} />
-                                                        </Form.Group>
+                                                    </Form.Group>
                                                 </Row>
                                                 <Row>
                                                     <Col>
@@ -697,13 +697,13 @@ class CreateProfile extends React.Component {
                                                 </Col>
                                             </Row>
                                             <Row>
-                                            <Form.Group as={Col} controlId="validationCustom1">
+                                                <Form.Group as={Col} controlId="validationCustom1">
                                                     <Form.Label><b>Portfolio URL</b></Form.Label>
-                                                    <Form.Control name="portfolio_urls" onChange={this.handleInput2} value={this.state.djourney ? this.state.djourney.portfolio_urls : ''} required/>
+                                                    <Form.Control name="portfolio_urls" onChange={this.handleInput2} value={this.state.djourney ? this.state.djourney.portfolio_urls : ''} required />
                                                     <span>Share your current online presence like Behance, Dribbble, etc.(links separated by ",")</span>
                                                     <br />
                                                     <Form.Control.Feedback type="invalid">Please add portfolio urls</Form.Control.Feedback>
-                                            </Form.Group>
+                                                </Form.Group>
                                             </Row>
                                             <Row>
                                                 <Col>
@@ -745,7 +745,7 @@ class CreateProfile extends React.Component {
                                                 </Form.Group>
                                             </Row>
                                             <Row>
-                                            <Form.Group as={Col} controlId="ValidationCustom2">
+                                                <Form.Group as={Col} controlId="ValidationCustom2">
                                                     <Form.Label>Add your portfolio description</Form.Label>
                                                     <Form.Control as="textarea" rows={5} name="description" onChange={this.portfolioInput} required />
                                                     <span>Write your portfilio description </span>
@@ -753,7 +753,7 @@ class CreateProfile extends React.Component {
                                                 </Form.Group>
                                             </Row>
                                             <Row className='mt-3'>
-                                            <Col>
+                                                <Col>
                                                     <div class="upload-btn-wrapper">
                                                         <p className="font-arial">you can upload max 5 images</p>
                                                         <span className="font-arial">please drag and drop to r-order images</span>

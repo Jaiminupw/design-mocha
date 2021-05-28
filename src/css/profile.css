@@ -200,10 +200,17 @@ h5.mt-3.mb-0 {
     padding-bottom: 40px;
 }
 .default-av {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-gap: 0px 12px;
+    margin: 0 auto !important;
     margin-top: 15px;
     flex-wrap: wrap;
+    overflow: auto;
+}
+.default-av img{
+    min-width: 80px;
+    height: 80px;
 }
 @media only screen and (min-width:768px){
     .ctoggle {

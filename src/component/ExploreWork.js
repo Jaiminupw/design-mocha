@@ -12,6 +12,7 @@ class ExploreWork extends PureComponent {
         this.state = {
             portfolios: [],
             fportfolios: [],
+            tportfolios: [],
             isAuthenticated: false
         }
     }
@@ -30,13 +31,16 @@ class ExploreWork extends PureComponent {
                     for (let key in user) {
                         user[key].map((portfolio) => {
                             portfolio.uid = key;
+                            portfolio.views = Math.floor(Math.random()*(99-10+1)+10);
+                            portfolio.likes = Math.floor(Math.random()*(99-10+1)+10);
+                            portfolio.inspiring_view = Math.floor(Math.random()*(99-10+1)+10);
                             portfolios.push(portfolio)
                             return true
                         })
                     }
                     return true
                 })
-                this.setState({ portfolios: portfolios, fportfolios: portfolios })
+                this.setState({ portfolios: portfolios, fportfolios: portfolios, tportfolios: portfolios })
             }).catch((err) => {
                 this.setState({ error: "something went wrong" })
                 this.setState({ isAuthenticated: "false" })
@@ -47,11 +51,37 @@ class ExploreWork extends PureComponent {
         console.log(cat)
         var portfolios = [];
         this.state.fportfolios.map((pr) => {
-            if(pr.category === cat) {
+            if (cat === "All") {
+                portfolios.push(pr)
+            }
+            else if (pr.category.split(",").includes(cat)) {
                 portfolios.push(pr);
             }
             return pr
         })
+        this.setState({ portfolios: portfolios, tportfolios: portfolios })
+    }
+    filterUsername = (e) => {
+        var val = e.target.value;
+        console.log(val)
+        var portfolios = [];
+        if(val === "") {
+            this.setState({ portfolios: this.state.tportfolios })
+        }
+        else {
+            this.state.portfolios.map((pr) => {
+                if (pr.username.toLowerCase().includes(val.toLowerCase())) {
+                    portfolios.push(pr);
+                }
+                return pr
+            })
+            this.setState({ portfolios: portfolios })
+        }
+    }
+    statsFilter = (e) => {
+        var portfolios = [...this.state.portfolios]
+        console.log(e.target.value)
+        portfolios.sort(function(a, b){return b[e.target.value] - a[e.target.value]});
         this.setState({portfolios: portfolios})
     }
     render() {
@@ -65,7 +95,7 @@ class ExploreWork extends PureComponent {
         }
         return (
             <div className="ework wrapper mnhide">
-                <Header active="explore"/>
+                <Header active="explore" />
                 <div className="top-banner pbanner">
                     <div className="row ml-0">
                         <div className="col-sm-12">
@@ -76,33 +106,33 @@ class ExploreWork extends PureComponent {
                 <div className="e-content">
                     <div className="top-filters mt-5 mb-5 px-5">
                         <div className="efilters">
-                            <Form.Control as="select" defaultValue="Choose..." className="font-arial">
-                                <option className="font-arial">inspiring</option>
-                                <option className="font-arial">likes</option>
-                                <option className="font-arial">views</option>
+                            <Form.Control as="select" defaultValue="Choose..." className="font-arial" onChange={this.statsFilter}>
+                                <option className="font-arial" value="inspiring_view">inspiring</option>
+                                <option className="font-arial" value="likes">likes</option>
+                                <option className="font-arial" value="views">views</option>
                             </Form.Control>
                         </div>
                         <div className="ecats">
-                            <Nav defaultActiveKey="/home" as="ul">
+                            <Nav defaultActiveKey="home" as="ul">
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial active" href="/explore" data-filter="All">All</Nav.Link>
+                                    <Nav.Link className="font-arial" data-filter="All" eventKey="home" onClick={this.applyFilter}>All</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-1" data-fiter="BRANDING">Branding</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-1" data-filter="BRANDING" onClick={this.applyFilter}>Branding</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-2" data-filter="FASHION DESIGN">Fashion Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-2" data-filter="FASHION DESIGN" onClick={this.applyFilter}>Fashion Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-3" data-filter="ARTISTIC DESIGN">Artistic Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-3" data-filter="ARTISTIC DESIGN" onClick={this.applyFilter}>Artistic Design</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
-                                    <Nav.Link className="font-arial" eventKey="link-4" data-filter="Others" onClick={this.applyFilter}>Digital Design</Nav.Link>
+                                    <Nav.Link className="font-arial" eventKey="link-4" data-filter="SOCIAL MEDIA DESIGN" onClick={this.applyFilter}>Social Media Design</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </div>
                         <div className="esearch">
-                            <Form.Control type="text" placeholder="Search tags" className="font-arial" />
+                            <Form.Control type="text" placeholder="Search tags" className="font-arial" onChange={this.filterUsername} />
                         </div>
                     </div>
                     {
@@ -119,7 +149,7 @@ class ExploreWork extends PureComponent {
                                                     <Card.Footer className="px-0 pd-40">
                                                         <div className="emeta">
                                                             <div className="euser">
-                                                                <div className="float-left eav"><img src={portfolio.photo_url} alt="pimg"/></div><p className="font-arial float-left user">{portfolio.username}</p>
+                                                                <div className="float-left eav"><img src={portfolio.photo_url} alt="pimg" /></div><p className="font-arial float-left user">{portfolio.username}</p>
                                                             </div>
                                                             <div className="eoptions">
                                                                 <i className="fa fa-lightbulb-o px-2 float-left pt-1"></i><p className="font-arial float-left">{portfolio.inspiring_view}</p>
