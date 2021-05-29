@@ -673,10 +673,6 @@ footer .nav-link {
   -webkit-transform: translateZ(-0.6px) scale(1.5);
   margin-bottom: 10px;
 }
-.wrapper {
-  perspective: 1.5px;
- -webkit-perspective: 1.5px;
-}
 .sectione2 p {
   max-width: 100%;
 }
