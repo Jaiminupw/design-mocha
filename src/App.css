@@ -984,7 +984,7 @@ div.ball{
   margin-top: 0px;
   color:  #af4125!important;
 }
-#stickytop .dropdown-menu a {
+.App.wrapper #stickytop .dropdown-menu a {
   color:  #606060!important;
 }
 .top-banner h3{
