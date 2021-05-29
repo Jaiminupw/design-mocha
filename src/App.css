@@ -368,7 +368,10 @@ footer .pleft {
     padding: 5px 24px
   }
   .nav-toggle {
-    z-index: -1 !important;
+    z-index: 999 !important;
+  }
+  .sticky-top {
+    z-index: 998;
   }
   .App #stickytop .slide-menu {
     right: 0 !important;
@@ -599,6 +602,7 @@ footer .nav-link {
     top: 0;
     right: 0;
     background-color: #EAE1CB;
+    z-index: 100;
   }
   .wrapper #stickytop #site-header a, .wrapper #stickytop #site-header button {
     color: #BD5828 !important;
